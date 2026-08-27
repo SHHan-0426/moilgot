@@ -1,0 +1,515 @@
+<title>모일 곳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@600;700&display=swap">
+
+<style>
+:root{
+  --ground:#F3F5F7; --surface:#FFFFFF; --surface-2:#F8FAFB;
+  --ink:#121A22; --ink-2:#33414D; --muted:#5A6874; --line:#DCE2E8; --line-2:#EAEEF2;
+  --accent:#1D4E77; --accent-soft:#E3EDF5; --accent-ink:#1D4E77;
+  --live:#146B48; --live-bg:#E2F0E9; --live-line:#BEDCCD;
+  --check:#8A5C10; --check-bg:#F8EEDA; --check-line:#E7D3A8;
+  --cold:#566370; --cold-bg:#EAEEF1; --cold-line:#D3DBE1;
+  --shadow:0 1px 2px rgba(18,26,34,.05), 0 8px 24px -12px rgba(18,26,34,.18);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0C1218; --surface:#141D25; --surface-2:#111A21;
+    --ink:#E5EBF1; --ink-2:#C3CFD9; --muted:#91A0AD; --line:#24303A; --line-2:#1C262E;
+    --accent:#78B2E0; --accent-soft:#16283A; --accent-ink:#9CC8EB;
+    --live:#5CC79A; --live-bg:#11291F; --live-line:#234A38;
+    --check:#DDAA50; --check-bg:#2B2213; --check-line:#4A3A1B;
+    --cold:#8FA0AC; --cold-bg:#1B242B; --cold-line:#2C3841;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0C1218; --surface:#141D25; --surface-2:#111A21;
+  --ink:#E5EBF1; --ink-2:#C3CFD9; --muted:#91A0AD; --line:#24303A; --line-2:#1C262E;
+  --accent:#78B2E0; --accent-soft:#16283A; --accent-ink:#9CC8EB;
+  --live:#5CC79A; --live-bg:#11291F; --live-line:#234A38;
+  --check:#DDAA50; --check-bg:#2B2213; --check-line:#4A3A1B;
+  --cold:#8FA0AC; --cold-bg:#1B242B; --cold-line:#2C3841;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  font-size:16.5px; line-height:1.78; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px; margin:0 auto; padding:0 22px; display:grid; grid-template-columns:1fr; gap:0}
+.col{max-width:760px; margin:0 auto; width:100%}
+
+/* ---------- masthead ---------- */
+.mast{border-bottom:1px solid var(--line); background:var(--surface)}
+.mast .col{padding:56px 0 40px; display:flex; flex-direction:column; gap:18px}
+.eyebrow{
+  font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:11.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--muted);
+}
+h1{
+  font-family:"Noto Serif KR", serif; font-weight:700; font-size:clamp(34px,6vw,52px);
+  line-height:1.2; letter-spacing:-.02em; margin:0; text-wrap:balance;
+}
+h1 .sub{display:block; font-size:clamp(15px,2.4vw,19px); font-weight:600; color:var(--muted); margin-top:12px; letter-spacing:0}
+.facts{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
+.fact{
+  font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--ink-2);
+  border:1px solid var(--line); background:var(--surface-2); border-radius:2px; padding:5px 10px;
+}
+.fact b{color:var(--accent-ink); font-weight:500}
+
+/* ---------- body ---------- */
+main .col{padding:44px 0 90px; display:flex; flex-direction:column; gap:52px}
+section{display:flex; flex-direction:column; gap:16px; scroll-margin-top:20px}
+h2{
+  font-family:"Noto Serif KR", serif; font-weight:600; font-size:26px; line-height:1.35;
+  margin:0; letter-spacing:-.01em; text-wrap:balance;
+  padding-bottom:12px; border-bottom:2px solid var(--ink);
+}
+h3{font-family:"IBM Plex Sans KR",sans-serif; font-weight:600; font-size:17px; margin:14px 0 0; color:var(--ink)}
+p{margin:0}
+strong{font-weight:600}
+em{font-style:normal; background:var(--accent-soft); color:var(--accent-ink); padding:1px 5px; border-radius:2px; font-weight:500}
+ul,ol{margin:0; padding-left:1.25em; display:flex; flex-direction:column; gap:8px}
+li::marker{color:var(--muted)}
+a{color:var(--accent-ink); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px}
+a:focus-visible,.tocl:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+/* ---------- lead statement ---------- */
+.lead{
+  background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--accent);
+  border-radius:2px; padding:26px 28px; display:flex; flex-direction:column; gap:12px; box-shadow:var(--shadow);
+}
+.lead q{
+  font-family:"Noto Serif KR",serif; font-weight:600; font-size:clamp(18px,3vw,22px); line-height:1.6;
+  quotes:'“' '”'; display:block; letter-spacing:-.01em;
+}
+.lead .after{color:var(--muted); font-size:15px}
+
+/* ---------- verdict ---------- */
+.verdict{
+  background:var(--live-bg); border:1px solid var(--live-line); border-radius:2px;
+  padding:22px 24px; display:flex; flex-direction:column; gap:10px;
+}
+.verdict .tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--live)}
+.verdict p{font-size:17px}
+.verdict strong{color:var(--live)}
+
+/* ---------- tables ---------- */
+.tscroll{overflow-x:auto; border:1px solid var(--line); border-radius:2px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; min-width:520px; font-size:14.5px; line-height:1.6}
+th,td{padding:11px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line-2)}
+thead th{
+  font-family:"IBM Plex Mono",monospace; font-weight:500; font-size:11.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted); background:var(--surface-2); border-bottom:1px solid var(--line);
+  white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums}
+th[scope="row"]{font-weight:600; white-space:nowrap}
+
+/* ---------- tier bands ---------- */
+.tiers{display:flex; flex-direction:column; gap:10px}
+.tier{
+  display:grid; grid-template-columns:auto 1fr; gap:4px 16px; align-items:start;
+  border:1px solid var(--line); border-radius:2px; padding:16px 18px; background:var(--surface);
+}
+.tier.a{border-left:4px solid var(--live); background:var(--live-bg); border-color:var(--live-line)}
+.tier.b{border-left:4px solid var(--check); background:var(--check-bg); border-color:var(--check-line)}
+.tier.c{border-left:4px solid var(--cold); background:var(--cold-bg); border-color:var(--cold-line)}
+.tier .letter{
+  font-family:"IBM Plex Mono",monospace; font-size:22px; font-weight:500; line-height:1.2;
+  grid-row:span 2; padding-top:2px;
+}
+.tier.a .letter{color:var(--live)} .tier.b .letter{color:var(--check)} .tier.c .letter{color:var(--cold)}
+.tier .name{font-weight:600; font-size:16px}
+.tier .meta{font-size:14px; color:var(--ink-2); line-height:1.65}
+.tier .meta code{
+  font-family:"IBM Plex Mono",monospace; font-size:12.5px; background:var(--surface);
+  border:1px solid var(--line); border-radius:2px; padding:1px 5px;
+}
+
+/* ---------- mock card ---------- */
+.mockwrap{display:flex; flex-direction:column; gap:8px}
+.mocklabel{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+.mock{
+  background:var(--surface); border:1px solid var(--line); border-radius:3px; padding:16px 18px;
+  display:flex; flex-direction:column; gap:9px; max-width:400px; box-shadow:var(--shadow);
+}
+.badge{
+  align-self:flex-start; display:inline-flex; align-items:center; gap:6px;
+  font-size:12.5px; font-weight:600; padding:3px 9px; border-radius:2px;
+  background:var(--live-bg); color:var(--live); border:1px solid var(--live-line);
+}
+.dot{width:7px; height:7px; border-radius:50%; background:currentColor}
+.mock .title{display:flex; justify-content:space-between; align-items:baseline; gap:12px}
+.mock .title b{font-size:17px; font-weight:600}
+.free{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--accent-ink); border:1px solid var(--accent-soft); background:var(--accent-soft); padding:2px 7px; border-radius:2px; white-space:nowrap}
+.mock .sub{font-size:13.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+.mock .btn{
+  align-self:stretch; text-align:center; background:var(--accent); color:#fff; border-radius:2px;
+  padding:9px; font-weight:600; font-size:14.5px; margin-top:2px;
+}
+:root[data-theme="dark"] .mock .btn{color:#0C1218}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mock .btn{color:#0C1218}}
+
+/* ---------- pipeline ---------- */
+pre{
+  margin:0; overflow-x:auto; background:var(--surface); border:1px solid var(--line); border-radius:2px;
+  padding:18px; font-family:"IBM Plex Mono",monospace; font-size:12.5px; line-height:1.7; color:var(--ink-2);
+}
+
+/* ---------- phases ---------- */
+.phase{border:1px solid var(--line); border-radius:2px; background:var(--surface); padding:18px 20px; display:flex; flex-direction:column; gap:10px}
+.phase.now{border-color:var(--accent); border-left:4px solid var(--accent)}
+.phase .head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+.phase .no{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.1em; color:var(--accent-ink); text-transform:uppercase}
+.phase .ttl{font-weight:600; font-size:17px}
+.phase .dur{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted); margin-left:auto}
+.gate{background:var(--check-bg); border:1px solid var(--check-line); border-radius:2px; padding:12px 14px; font-size:14.5px; color:var(--ink-2)}
+.gate b{color:var(--check)}
+
+/* ---------- not building ---------- */
+.nolist{display:flex; flex-direction:column; gap:0; border:1px solid var(--line); border-radius:2px; background:var(--surface)}
+.nolist div{padding:14px 18px; border-bottom:1px solid var(--line-2); display:flex; gap:14px; align-items:baseline; font-size:15px}
+.nolist div:last-child{border-bottom:none}
+.nolist b{font-weight:600; min-width:9.5em; color:var(--ink)}
+.nolist span{color:var(--muted); font-size:14.5px}
+
+/* ---------- decisions ---------- */
+.dec{counter-reset:d; display:flex; flex-direction:column; gap:0; border:1px solid var(--line); border-radius:2px; background:var(--surface)}
+.dec > div{counter-increment:d; padding:14px 18px 14px 52px; position:relative; border-bottom:1px solid var(--line-2); font-size:15px}
+.dec > div:last-child{border-bottom:none}
+.dec > div::before{
+  content:counter(d); position:absolute; left:18px; top:14px;
+  font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--accent-ink);
+}
+.dec b{font-weight:600}
+.dec span{color:var(--muted); font-size:14px; display:block}
+
+/* ---------- toc ---------- */
+.toc{display:none}
+@media (min-width:1180px){
+  .wrap.body{grid-template-columns:200px minmax(0,1fr) 200px}
+  .toc{
+    display:block; position:sticky; top:32px; align-self:start; grid-column:1;
+    padding:44px 0 0; font-size:13px; line-height:1.5;
+  }
+  .toc ol{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px; border-left:1px solid var(--line); }
+  .tocl{display:block; color:var(--muted); text-decoration:none; padding-left:14px; border-left:2px solid transparent; margin-left:-1px}
+  .tocl:hover{color:var(--accent-ink); border-left-color:var(--accent)}
+  main .col{grid-column:2}
+}
+
+footer{border-top:1px solid var(--line); background:var(--surface)}
+footer .col{padding:24px 0 40px; font-size:13px; color:var(--muted); display:flex; flex-wrap:wrap; gap:6px 16px}
+footer .col span{font-family:"IBM Plex Mono",monospace}
+</style>
+
+<header class="mast">
+  <div class="wrap"><div class="col">
+    <div class="eyebrow">기획안 v1.1 · Phase 0 실사 반영 · 2026.08.27</div>
+    <h1>모일 곳
+      <span class="sub">무료·실비 공간을, 그날 비었는지까지 보여주는 검색 사이트</span>
+    </h1>
+    <div class="facts">
+      <span class="fact">이용자 <b>소모임·단체 운영자</b></span>
+      <span class="fact">범위 <b>무료 + 시간당 1만원 이하</b></span>
+      <span class="fact">지역 <b>서울 우선 · 수도권 확대</b></span>
+      <span class="fact">핵심 <b>예약 가능 여부 조회</b></span>
+    </div>
+  </div></div>
+</header>
+
+<div class="wrap body">
+  <nav class="toc" aria-label="목차">
+    <ol>
+      <li><a class="tocl" href="#q">수도권만 하면 되나</a></li>
+      <li><a class="tocl" href="#p0">Phase 0 실사 결과</a></li>
+      <li><a class="tocl" href="#problem">문제</a></li>
+      <li><a class="tocl" href="#user">이용자</a></li>
+      <li><a class="tocl" href="#tier">3단계 신선도</a></li>
+      <li><a class="tocl" href="#screen">화면 설계</a></li>
+      <li><a class="tocl" href="#no">만들지 않는 것</a></li>
+      <li><a class="tocl" href="#tech">기술 구조</a></li>
+      <li><a class="tocl" href="#phase">단계</a></li>
+      <li><a class="tocl" href="#risk">지표와 리스크</a></li>
+      <li><a class="tocl" href="#decide">결정할 것</a></li>
+    </ol>
+  </nav>
+
+  <main><div class="col">
+
+    <section>
+      <div class="lead">
+        <q>다음 주 토요일, 12명, 우리 동네. 무료로 쓸 수 있는 방이 어디 있고 그날 비어 있나.</q>
+        <p class="after">이 한 문장을 30분이 아니라 3분 안에 끝내주는 사이트. 가칭 <strong>모일 곳</strong>.</p>
+      </div>
+    </section>
+
+    <section id="q">
+      <h2>수도권만 하면 가능한가</h2>
+      <div class="verdict">
+        <div class="tag">처음 결론</div>
+        <p>전국은 251개 기관이 제각각 분기 갱신하는 반면, 수도권은 서울·경기·인천이 각각 <strong>광역 통합 예약 시스템과 Open API</strong>를 갖고 있다. 그래서 "수도권이면 된다"고 판단했다.</p>
+      </div>
+      <div class="tscroll"><table>
+        <thead><tr><th></th><th>전국</th><th>수도권 3개 시도</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">소스 개수</th><td>251개 기관이 제각각</td><td>3개 광역 통합 시스템</td></tr>
+          <tr><th scope="row">갱신 주기</th><td>분기 (3개월)</td><td>일 단위 이하</td></tr>
+          <tr><th scope="row">예약 상태</th><td>없음</td><td>있음</td></tr>
+          <tr><th scope="row">유지보수</th><td>사실상 불가능</td><td>파이프라인 3개</td></tr>
+        </tbody>
+      </table></div>
+      <p>그리고 <strong>실제로 호출해 봤다.</strong> 결과는 아래와 같이 달랐다.</p>
+    </section>
+
+    <section id="p0">
+      <h2>Phase 0 실사 결과</h2>
+      <div class="verdict" style="background:var(--check-bg); border-color:var(--check-line)">
+        <div class="tag" style="color:var(--check)">실사 후 수정된 결론</div>
+        <p style="color:var(--ink)"><strong style="color:var(--check)">"수도권 3개 시도"는 성립하지 않는다. 실질은 서울 단독이다.</strong> 경기는 API가 사실상 멈춰 있고, 인천은 이름과 달리 7개 기관짜리다.</p>
+      </div>
+
+      <h3>서울 — 유일하게 튼튼하다</h3>
+      <div class="tscroll"><table>
+        <thead><tr><th>서비스</th><th>총건수</th></tr></thead>
+        <tbody>
+          <tr><td>시설대관</td><td class="num"><strong>611</strong></td></tr>
+          <tr><td>체육시설</td><td class="num"><strong>677</strong></td></tr>
+          <tr><td>교육</td><td class="num">423</td></tr>
+          <tr><td>문화행사</td><td class="num">1,185</td></tr>
+          <tr><td>진료</td><td class="num">29</td></tr>
+        </tbody>
+      </table></div>
+      <p>공간을 빌리는 것과 직접 관련된 건 <strong>시설대관 + 체육시설 = 1,288건</strong>. 23개 필드를 확보했고 필요한 게 거의 다 있다 — <code>PAYATNM</code>으로 무료 판별, <code>SVCURL</code>로 예약 딥링크, <code>X·Y</code>로 거리 계산, <code>AREANM</code>으로 자치구, <code>SVCSTATNM</code>으로 접수 상태.</p>
+      <div class="verdict" style="background:var(--accent-soft); border-color:var(--accent)">
+        <div class="tag" style="color:var(--accent-ink)">핵심 확인</div>
+        <p style="color:var(--ink)"><strong style="color:var(--accent-ink)">날짜 단위 빈자리 필드는 없다.</strong> 접수 상태와 접수 기간까지만 준다. 세 소스 어디에도 없었다. <strong>A층은 v1에서 뺀다.</strong></p>
+      </div>
+
+      <h3>경기 — 사실상 사용 불가</h3>
+      <ul>
+        <li><strong>총 49건.</strong> 31개 시군 통합이라는 설명과 실제 개방량이 전혀 다르다</li>
+        <li>데이터 기준일 <strong>2024-09-11</strong>, 갱신주기 "주기없음" — 약 2년간 멈춰 있다</li>
+        <li><strong>사용료 필드가 아예 없다</strong> → 무료·유료 판별 불가</li>
+        <li>예약방법이 <code>전화, 방문</code> — 온라인 예약도 아니다</li>
+      </ul>
+
+      <h3>인천 — 중간. 스크래핑이 필요하다</h3>
+      <ul>
+        <li>공공데이터포털 등록이 <strong>API 유형 "LINK"</strong> — 포털에 REST 명세가 없다</li>
+        <li>목록 페이지는 서버 렌더링이라 수집은 가능하다</li>
+        <li>다만 통합회원 대관 운영기관은 <strong>7곳뿐</strong>. 나머지 군·구와 시설공단은 각자 별도 시스템에 별도 로그인이다</li>
+        <li>목록에 요금 정보가 없다</li>
+      </ul>
+
+      <h3>전국 표준데이터 — 로그인이 필요하다</h3>
+      <p>파일 다운로드는 비로그인 404, odcloud API는 401. 25개 항목에 유료사용여부·사용료·수용인원·위경도가 있어 여전히 최선의 백본이지만 <strong>분기 갱신이라 C층 전용</strong>이다.</p>
+
+      <h3>그래서 기획을 이렇게 바꾼다</h3>
+      <ol>
+        <li><strong>Phase 1 지역은 서울로 확정.</strong> 수도권 균등 전개는 데이터가 뒷받침하지 않는다</li>
+        <li><strong>A층은 v1에서 제외.</strong> 배지는 🟡 접수 중과 ⚪ 전화 확인 두 층으로 시작하고, A층은 자리만 비워둔다</li>
+        <li><strong>무료 판별이 되는 소스는 둘뿐</strong> — 서울 <code>PAYATNM</code>과 전국 표준데이터 <code>유료사용여부</code></li>
+        <li><strong>경기·인천은 C층으로 시작.</strong> 인천만 스크래퍼로 B층 일부를 얹는다</li>
+      </ol>
+    </section>
+
+    <section id="problem">
+      <h2>문제 — 장소 구하기가 모임의 병목이다</h2>
+      <p>소모임 운영자가 모임 하나를 잡을 때 실제로 하는 일:</p>
+      <ol>
+        <li>공유누리·지자체 사이트·블로그를 돌며 후보를 모은다</li>
+        <li>각각 들어가 무료인지, 자격이 되는지, 인원이 맞는지를 따로 확인한다</li>
+        <li>그날 비었는지는 결국 <strong>전화</strong>로 묻는다</li>
+        <li>사이트마다 회원가입을 다시 한다</li>
+      </ol>
+      <p><strong>삼중 확인 지옥</strong>이다. 정보가 없어서가 아니라 흩어져 있고, 조건으로 좁힐 수 없고, 신선도를 알 수 없어서 생기는 문제다.</p>
+      <p>공유누리가 이미 있는데 왜 또 만드나 — 공유누리는 <strong>자원 카탈로그</strong>다. 유·무료가 섞여 있고 "우리 모임 조건에 맞는 곳"으로 좁히는 도구가 아니다. 이 사이트는 <strong>모임 하나를 성사시키는 도구</strong>다.</p>
+    </section>
+
+    <section id="user">
+      <h2>이용자</h2>
+      <p><strong>김운영 (56)</strong> — 지역 독서모임 12명 운영. 월 1회 토요일 오후 2시간. 예산 없음. 매달 장소 잡는 게 제일 귀찮다. 스마트폰으로 본다. 작은 글씨 싫다.</p>
+      <div class="lead">
+        <q>다음 달 셋째 주 토요일, 12명, 고양시에서 무료로 쓸 수 있는 방을 오늘 안에 확정하고 싶다.</q>
+        <p class="after">김운영이 해결하려는 일</p>
+      </div>
+      <p><strong>상대하지 않는 사람</strong> — 사무실 구하는 프리랜서, 혼자 공부할 데 찾는 사람, 상업 행사 주최자. 이들을 받으려다 사이트가 흐려진다.</p>
+    </section>
+
+    <section id="tier">
+      <h2>척추 — 3단계 신선도 모델</h2>
+      <p>수도권으로 좁혀도 모든 공간을 A층으로 만들 수는 없다. 그래서 층을 나누고, <strong>화면에 층을 명시한다.</strong></p>
+      <div class="tiers">
+        <div class="tier a">
+          <div class="letter">A</div>
+          <div class="name">예약 가능 확인됨 — 그 날짜에 비었는지 안다 <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;color:var(--muted);border:1px solid var(--line);padding:1px 6px;border-radius:2px;margin-left:6px;vertical-align:2px">V1 제외</span></div>
+          <div class="meta">Phase 0 실사 결과 <strong>어느 소스에도 날짜 단위 빈자리 필드가 없었다.</strong> 자리만 비워두고 Phase 3에서 다시 본다.</div>
+        </div>
+        <div class="tier b">
+          <div class="letter">B</div>
+          <div class="name">접수 중 — 지금 신청을 받는지만 안다</div>
+          <div class="meta">위 API의 상태값·접수기간 &nbsp;/&nbsp; 1일 &nbsp;/&nbsp; 화면 <code>🟡 접수 중 · 날짜는 확인 필요</code> + 예약 페이지 버튼</div>
+        </div>
+        <div class="tier c">
+          <div class="letter">C</div>
+          <div class="name">시설 정보만 — 조건·요금·연락처를 안다</div>
+          <div class="meta">전국 표준데이터 &nbsp;/&nbsp; 분기 &nbsp;/&nbsp; 화면 <code>⚪ 전화로 확인</code> + 전화 걸기 버튼 + <code>최종 확인 2026.7.1</code></div>
+        </div>
+      </div>
+      <div class="verdict" style="background:var(--accent-soft); border-color:var(--accent)">
+        <div class="tag" style="color:var(--accent-ink)">절대 원칙</div>
+        <p style="color:var(--ink)"><strong style="color:var(--accent-ink)">모르는 걸 아는 척하지 않는다.</strong> C층을 A층처럼 보이게 하는 순간, 한 번 헛걸음시키고 신뢰를 잃는다. 배지가 이 사이트의 전부다.</p>
+      </div>
+      <p>부수 효과가 하나 있다. C층이 많아도 사이트는 여전히 유용하다. <strong>조건으로 좁힌 전화 후보 5곳</strong>이, 좁히지 못한 500곳보다 낫기 때문이다.</p>
+    </section>
+
+    <section id="screen">
+      <h2>화면 설계 v1</h2>
+      <h3>검색이 곧 첫 화면</h3>
+      <p>입력은 <strong>네 개만</strong> 받는다. 그 이상은 v1에서 받지 않는다.</p>
+      <ul>
+        <li><strong>어디서</strong> — 시·군·구 (현재 위치 버튼)</li>
+        <li><strong>몇 명</strong> — 인원</li>
+        <li><strong>언제</strong> — 날짜 (안 고르면 전체)</li>
+        <li><strong>무엇을</strong> — 회의 / 강의 / 모임·행사 / 운동</li>
+      </ul>
+
+      <div class="mockwrap">
+        <div class="mocklabel">결과 카드</div>
+        <div class="mock">
+          <span class="badge" style="background:var(--check-bg);color:var(--check);border-color:var(--check-line)"><span class="dot"></span>접수 중 · 9/28까지</span>
+          <div class="title"><b>화정도서관 다목적실</b><span class="free">무료</span></div>
+          <div class="sub">정원 20명 · 2.1km · 09~18시</div>
+          <div class="sub">빔프로젝터 · 화이트보드</div>
+          <div class="btn">예약하기</div>
+        </div>
+      </div>
+      <p>정렬 순서는 <strong>접수 중 → 무료 → 가까운 순</strong>. (A층이 생기면 맨 앞에 붙인다.)</p>
+
+      <h3>상세</h3>
+      <p>사용료 계산기(기준시간과 초과단위 요금을 실제 이용시간에 곱해 "2시간이면 0원, 6시간이면 6,000원"으로), 부대시설, 신청방법, 지도, 원문 링크, 그리고 <strong>정보가 달라요 신고 버튼</strong>.</p>
+
+      <h3>지역 랜딩 페이지</h3>
+      <p><code>/고양시/무료-회의실</code> 형태로 자동 생성한다. "고양시 무료 회의실 대관"이 실제 검색 수요다. <strong>사이트 성패의 절반이 여기서 갈린다.</strong></p>
+    </section>
+
+    <section id="no">
+      <h2>만들지 않는 것</h2>
+      <div class="nolist">
+        <div><b>자체 예약·결제</b><span>예약은 원 시스템으로 보낸다. 유지비 0, 법적 책임 0. 이 선을 넘는 순간 사업이 된다.</span></div>
+        <div><b>회원가입·로그인</b><span>v1은 비로그인. 저장은 브라우저에.</span></div>
+        <div><b>후기·평점</b><span>데이터 없이 시작하면 빈 화면만 남는다. 이용자가 생긴 뒤에.</span></div>
+        <div><b>앱</b><span>모바일 웹으로 충분하다.</span></div>
+      </div>
+    </section>
+
+    <section id="tech">
+      <h2>기술 구조</h2>
+      <p>이미 검증된 <strong>오늘 뭐하지</strong>·<strong>공모 한눈에</strong> 패턴을 그대로 재사용한다.</p>
+      <pre>서울 공공서비스예약 API (일 1회)  ┐
+경기공유서비스 시설대관 API       ├─→  GitHub Actions 매일 새벽 수집
+인천 통합예약안내 API             │              │
+전국 표준데이터 (분기)            ┘              ▼
+                        정규화 · 시군구 코드 매칭 · 중복 제거
+                                       │
+                                       ▼
+                 시도별 분할 JSON 커밋  →  Netlify 자동 배포
+                                       │
+                                       ▼
+                 정적 사이트 + 클라이언트 검색
+                 (실시간 조회분만 Netlify Function 1개로 프록시)</pre>
+      <ul>
+        <li>검색은 클라이언트에서. 전국을 통째로 받지 않고 <strong>시·도 단위 JSON 분할 로드</strong></li>
+        <li>API 키는 Netlify 환경변수 + Function 프록시. 클라이언트 노출 금지</li>
+        <li>지도는 v1 후순위. 목록과 거리 표시로 시작</li>
+      </ul>
+      <p><strong>최대 리스크는 화려한 기능이 아니라 데이터 정규화다.</strong> 주소 표기가 제각각이고, 사용료가 자유 텍스트이고, 시설명이 중복된다. 여기서 시간이 다 간다.</p>
+    </section>
+
+    <section id="phase">
+      <h2>단계</h2>
+
+      <div class="phase now">
+        <div class="head"><span class="no">Phase 0</span><span class="ttl">데이터 실사</span><span class="dur" style="color:var(--live)">완료 · 2026.08.27</span></div>
+        <p>실사 결과는 위 <a href="#p0">Phase 0 실사 결과</a>에 있다. 남은 것은 인증키 두 개뿐이다.</p>
+        <ol>
+          <li>서울 API 실호출 — <strong>완료.</strong> 23개 필드·서비스별 총건수 확보</li>
+          <li>경기 TBGSSFACILITY 호출 — <strong>완료.</strong> 49건·요금 필드 없음 확인</li>
+          <li>인천 목록 파싱 — <strong>완료.</strong> LINK형 API·통합기관 7곳 확인</li>
+          <li>전국 표준데이터 — <strong>보류.</strong> 비로그인 다운로드 차단, 인증키 필요</li>
+          <li><strong>남은 것</strong> — <code>SEOUL_KEY</code>와 <code>DATA_KEY</code> 발급 후 수집기 실행</li>
+        </ol>
+        <div class="gate"><b>판단 게이트</b> — 수도권 무료+실비 유효 건수가 1,500건 미만이면 서울만으로 시작한다. <code>DATA_KEY</code>가 나오면 자동 판정된다.</div>
+      </div>
+
+      <div class="phase">
+        <div class="head"><span class="no">Phase 1</span><span class="ttl">검색 MVP</span><span class="dur">2주</span></div>
+        <p><strong>서울 확정.</strong> 시설대관·체육시설 1,288건으로 검색 → 결과 → 상세 → 예약·전화까지 한 흐름을 완성한다. 배지는 🟡 접수 중과 ⚪ 전화 확인 두 층.</p>
+      </div>
+
+      <div class="phase">
+        <div class="head"><span class="no">Phase 2</span><span class="ttl">수도권 확대와 지역 랜딩</span><span class="dur">2주</span></div>
+        <p>경기·인천은 <strong>표준데이터 기반 C층</strong>으로 붙인다. 인천만 스크래퍼로 B층 일부를 얹는다. 지역 랜딩 자동 생성, 검색엔진 노출, 신고 버튼 운영.</p>
+      </div>
+
+      <div class="phase">
+        <div class="head"><span class="no">Phase 3</span><span class="ttl">정밀도</span><span class="dur">이후</span></div>
+        <p>공유누리 OPEN API(승인제) 추가, 시군구 자체 시스템 개별 연동, 지도 뷰.</p>
+      </div>
+    </section>
+
+    <section id="risk">
+      <h2>지표와 리스크</h2>
+      <p>v1에서 볼 것은 방문 수가 아니라 <strong>전환</strong>이다.</p>
+      <div class="tscroll"><table>
+        <thead><tr><th>지표</th><th>3개월 목표</th></tr></thead>
+        <tbody>
+          <tr><td>검색 → 예약하기·전화 클릭 전환율</td><td class="num">15%</td></tr>
+          <tr><td>월 방문</td><td class="num">1,000</td></tr>
+          <tr><td>재방문 비율</td><td class="num">25%</td></tr>
+          <tr><td>신고 접수 후 정정 반영</td><td class="num">전량</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="tscroll"><table>
+        <thead><tr><th>리스크</th><th>대응</th></tr></thead>
+        <tbody>
+          <tr><td>분기 갱신 탓에 폐관·요금 변경이 늦게 반영됨</td><td>최종 확인일 항상 표기 + 신고 버튼 + 전화번호 병기</td></tr>
+          <tr><td>API가 날짜 단위 빈자리를 주지 않을 경우</td><td>A층 없이 B·C층만으로도 사이트가 성립하도록 설계 — 이미 그렇게 잡았다</td></tr>
+          <tr><td>시군구 자체 시스템 누락</td><td>커버리지를 숨기지 않고 "이 지역은 몇 곳 수록"으로 명시</td></tr>
+          <tr><td>데이터 품질 — 주소·요금이 자유 텍스트</td><td>Phase 0 실측 후 범위 조정</td></tr>
+          <tr><td>공유누리와 뭐가 다르냐는 질문</td><td>무료·실비만 / 조건으로 좁힘 / 신선도 명시 / 중장년 가독성</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="decide">
+      <h2>결정할 것</h2>
+      <div class="dec">
+        <div><b>사이트명과 도메인</b><span>모일 곳 / 빈방 찾기 / 공간 한눈에</span></div>
+        <div><b>컴투게더 산하인가, 독립인가</b><span>대상이 다르므로 독립 권장. 컴투게더에서 링크만 건다</span></div>
+        <div><b>인증키 2개 발급</b><span>서울 열린데이터광장 · 공공데이터포털. 운영자만 발급 가능하고, 나오는 즉시 수집기가 돌아간다</span></div>
+        <div><b>인증키 신청 주체</b><span>개인 명의 vs 컴투게더 명의</span></div>
+        <div><b>고양시를 특별 취급할까</b><span>경기라 C층이지만 운영자 생활권이다. 파일럿 지역으로 따로 볼지</span></div>
+      </div>
+    </section>
+
+  </div></main>
+</div>
+
+<footer><div class="wrap"><div class="col">
+  <span>출처</span>
+  <a href="https://www.data.go.kr/data/15013117/standard.do">전국공공시설개방정보표준데이터</a>
+  <a href="https://data.seoul.go.kr/dataList/OA-20497/S/1/datasetView.do">서울시 공공서비스예약(종합)</a>
+  <a href="https://data.gg.go.kr/portal/data/service/selectServicePage.do?infId=0MQ4S7NZHRSP1QBGP8M236822019&infSeq=2">경기공유서비스 시설대관</a>
+  <a href="https://www.data.go.kr/data/15085804/openapi.do">인천광역시 통합예약안내</a>
+  <a href="https://www.eshare.go.kr/OpenApi/Info/index.do">공유누리 OPEN API</a>
+</div></div></footer>
