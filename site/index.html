@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>모일 곳 — 서울 무료·실비 공간 찾기</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%8D%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ground:#F3F5F7; --surface:#fff; --surface-2:#F8FAFB;
+  --ink:#121A22; --ink-2:#33414D; --muted:#5A6874; --line:#DCE2E8; --line-2:#EAEEF2;
+  --accent:#1D4E77; --accent-ink:#1D4E77; --accent-soft:#E3EDF5; --on-accent:#fff;
+  --open:#8A5C10; --open-bg:#F8EEDA; --open-line:#E7D3A8;
+  --cold:#566370; --cold-bg:#EAEEF1; --cold-line:#D3DBE1;
+  --free:#146B48; --free-bg:#E2F0E9; --free-line:#BEDCCD;
+  --shadow:0 1px 2px rgba(18,26,34,.05), 0 10px 26px -14px rgba(18,26,34,.22);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0C1218; --surface:#141D25; --surface-2:#111A21;
+  --ink:#E5EBF1; --ink-2:#C3CFD9; --muted:#91A0AD; --line:#24303A; --line-2:#1C262E;
+  --accent:#78B2E0; --accent-ink:#9CC8EB; --accent-soft:#16283A; --on-accent:#0C1218;
+  --open:#DDAA50; --open-bg:#2B2213; --open-line:#4A3A1B;
+  --cold:#8FA0AC; --cold-bg:#1B242B; --cold-line:#2C3841;
+  --free:#5CC79A; --free-bg:#11291F; --free-line:#234A38;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 26px -14px rgba(0,0,0,.65);
+}}
+:root[data-theme="dark"]{
+  --ground:#0C1218; --surface:#141D25; --surface-2:#111A21;
+  --ink:#E5EBF1; --ink-2:#C3CFD9; --muted:#91A0AD; --line:#24303A; --line-2:#1C262E;
+  --accent:#78B2E0; --accent-ink:#9CC8EB; --accent-soft:#16283A; --on-accent:#0C1218;
+  --open:#DDAA50; --open-bg:#2B2213; --open-line:#4A3A1B;
+  --cold:#8FA0AC; --cold-bg:#1B242B; --cold-line:#2C3841;
+  --free:#5CC79A; --free-bg:#11291F; --free-line:#234A38;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 26px -14px rgba(0,0,0,.65);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--ground); color:var(--ink); font-size:17px; line-height:1.7;
+  font-family:"IBM Plex Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px; margin:0 auto; padding:0 16px}
+
+header{background:var(--surface); border-bottom:1px solid var(--line)}
+header .wrap{padding:22px 16px 18px; display:flex; flex-direction:column; gap:6px}
+h1{margin:0; font-size:26px; font-weight:700; letter-spacing:-.02em}
+h1 span{color:var(--accent-ink)}
+.tag{margin:0; font-size:14.5px; color:var(--muted)}
+
+.search{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:16px; display:flex; flex-direction:column; gap:14px; box-shadow:var(--shadow); margin-top:18px}
+.row{display:flex; gap:10px; flex-wrap:wrap}
+.field{flex:1 1 150px; display:flex; flex-direction:column; gap:6px; min-width:0}
+/* 세로 스택 안의 필드는 남는 높이를 먹지 않게 한다 */
+.search > .field{flex:0 0 auto}
+label{font-size:13.5px; font-weight:600; color:var(--muted)}
+select,input[type=number]{
+  font:inherit; font-size:16.5px; padding:11px 12px; border:1px solid var(--line);
+  border-radius:3px; background:var(--surface-2); color:var(--ink); width:100%;
+}
+select:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent); outline-offset:2px}
+.chips{display:flex; gap:7px; flex-wrap:wrap}
+.chip{
+  font:inherit; font-size:15px; padding:8px 14px; border-radius:999px; cursor:pointer;
+  border:1px solid var(--line); background:var(--surface-2); color:var(--ink-2);
+}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--on-accent); font-weight:600}
+.toggle{display:flex; align-items:center; gap:9px; font-size:15.5px; color:var(--ink-2); cursor:pointer}
+.toggle input{width:20px; height:20px; accent-color:var(--accent)}
+
+.count{padding:20px 0 10px; margin:0; font-size:15px; color:var(--muted)}
+.count b{color:var(--ink); font-size:17px}
+.list{display:flex; flex-direction:column; gap:11px; padding-bottom:60px}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:15px 16px; display:flex; flex-direction:column; gap:8px; box-shadow:var(--shadow);
+}
+.badge{
+  align-self:flex-start; display:inline-flex; align-items:center; gap:6px; font-size:13px;
+  font-weight:600; padding:3px 10px; border-radius:3px; border:1px solid;
+}
+.b-open{background:var(--open-bg); color:var(--open); border-color:var(--open-line)}
+.b-cold{background:var(--cold-bg); color:var(--cold); border-color:var(--cold-line)}
+.dot{width:7px; height:7px; border-radius:50%; background:currentColor}
+.ttl{display:flex; justify-content:space-between; align-items:baseline; gap:10px}
+.ttl b{font-size:18px; font-weight:600; line-height:1.4}
+.fee{font-family:"IBM Plex Mono",monospace; font-size:13px; padding:2px 8px; border-radius:3px; white-space:nowrap;
+  background:var(--free-bg); color:var(--free); border:1px solid var(--free-line)}
+.fee.cheap{background:var(--accent-soft); color:var(--accent-ink); border-color:var(--accent-soft)}
+.meta{font-size:14.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+.fac{font-size:14px; color:var(--ink-2)}
+.acts{display:flex; gap:8px; margin-top:3px; flex-wrap:wrap}
+.btn{
+  font:inherit; font-size:15.5px; font-weight:600; padding:10px 16px; border-radius:3px;
+  border:1px solid var(--accent); background:var(--accent); color:var(--on-accent);
+  text-decoration:none; cursor:pointer; flex:1 1 auto; text-align:center;
+}
+.btn.ghost{background:transparent; color:var(--accent-ink)}
+.empty{padding:46px 18px; text-align:center; color:var(--muted); background:var(--surface);
+  border:1px dashed var(--line); border-radius:4px}
+.empty b{display:block; color:var(--ink); font-size:17px; margin-bottom:6px}
+
+details.detail{border-top:1px dashed var(--line); margin-top:4px; padding-top:8px}
+details.detail summary{cursor:pointer; font-size:14.5px; color:var(--accent-ink); font-weight:600}
+.dl{display:grid; grid-template-columns:auto 1fr; gap:6px 14px; font-size:14.5px; margin:10px 0 0}
+.dl dt{color:var(--muted); white-space:nowrap}
+.dl dd{margin:0; color:var(--ink-2); word-break:break-word}
+.calc{margin-top:12px; background:var(--surface-2); border:1px solid var(--line-2);
+  border-radius:3px; padding:12px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:15px}
+.calc input{width:78px}
+.calc .out{font-weight:700; color:var(--accent-ink); font-variant-numeric:tabular-nums}
+.calc .note{color:var(--muted); font-size:13.5px}
+footer{border-top:1px solid var(--line); background:var(--surface); font-size:13.5px; color:var(--muted)}
+footer .wrap{padding:18px 16px 34px; display:flex; flex-direction:column; gap:5px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>모일 <span>곳</span></h1>
+  <p class="tag">서울의 무료·실비 공간을 인원과 동네로 좁혀 찾습니다.</p>
+</div></header>
+
+<main class="wrap">
+  <div class="search">
+    <div class="row">
+      <div class="field">
+        <label for="gu">어디서</label>
+        <select id="gu"><option value="">서울 전체</option></select>
+      </div>
+      <div class="field">
+        <label for="ppl">몇 명</label>
+        <input id="ppl" type="number" min="1" max="500" placeholder="예: 12">
+      </div>
+    </div>
+    <div class="field">
+      <label>무엇을</label>
+      <div class="chips" id="cats" role="group" aria-label="공간 종류">
+        <button class="chip" type="button" data-cat="" aria-pressed="true">전체</button>
+        <button class="chip" type="button" data-cat="실내" aria-pressed="false">모임·회의</button>
+        <button class="chip" type="button" data-cat="체육" aria-pressed="false">운동</button>
+      </div>
+    </div>
+    <label class="toggle"><input type="checkbox" id="onlyfree"> 무료만 보기</label>
+    <label class="toggle"><input type="checkbox" id="onlyopen"> 지금 신청 받는 곳만</label>
+  </div>
+
+  <p class="count" id="count"></p>
+  <div class="list" id="list"></div>
+</main>
+
+<footer><div class="wrap">
+  <span>출처 · 전국공공시설개방정보표준데이터(분기 갱신) + 서울시 공공서비스예약(매일 갱신)</span>
+  <span>⚪ 표시는 그날 비었는지 알 수 없는 곳입니다. 전화로 확인하세요.</span>
+</div></footer>
+
+<script>
+const won = n => n.toLocaleString('ko-KR');
+let DATA = [];
+const state = { gu:'', ppl:null, cat:'', free:false, open:false };
+
+const isOpen = r => r.tier === 'B' && (r.status === '접수중' || r.status === '안내중');
+
+function match(r){
+  if (state.gu && r.sigungu !== state.gu) return false;
+  if (state.cat && r.category !== state.cat) return false;
+  if (state.free && r.fee_kind !== '무료') return false;
+  if (state.open && !isOpen(r)) return false;
+  // 정원은 아는 곳만 거른다. 모른다고 숨기면 후보가 사라진다.
+  if (state.ppl && r.capacity && r.capacity < state.ppl) return false;
+  return true;
+}
+
+const sortKey = r => [isOpen(r) ? 0 : 1, r.fee_kind === '무료' ? 0 : 1, r.capacity ? 0 : 1, r.name || ''];
+
+function card(r){
+  const el = document.createElement('article');
+  el.className = 'card';
+  const open = isOpen(r);
+  const bits = [];
+  if (r.capacity) bits.push('정원 ' + r.capacity + '명');
+  if (r.open && r.close && r.open !== r.close) bits.push(r.open + '~' + r.close);
+  if (r.sigungu) bits.push(r.sigungu);
+  if (r.fclty_type) bits.push(r.fclty_type);
+
+  const badge = document.createElement('span');
+  badge.className = 'badge ' + (open ? 'b-open' : 'b-cold');
+  badge.innerHTML = '<span class="dot"></span>';
+  badge.append(open ? ('신청 받는 중' + (r.rcpt_end ? ' · ' + r.rcpt_end + '까지' : '')) : '전화로 확인');
+  el.appendChild(badge);
+
+  const ttl = document.createElement('div');
+  ttl.className = 'ttl';
+  const nm = document.createElement('b');
+  nm.textContent = r.name || '(이름 없음)';
+  const fee = document.createElement('span');
+  fee.className = 'fee' + (r.fee_kind === '실비' ? ' cheap' : '');
+  fee.textContent = r.fee_kind === '무료' ? '무료'
+    : (r.fee_min != null ? won(r.fee_min) + '원~' : '실비');
+  ttl.append(nm, fee);
+  el.appendChild(ttl);
+
+  const meta = document.createElement('div');
+  meta.className = 'meta'; meta.textContent = bits.join(' · ');
+  el.appendChild(meta);
+
+  if (r.facilities){
+    const f = document.createElement('div');
+    f.className = 'fac'; f.textContent = r.facilities.slice(0, 90);
+    el.appendChild(f);
+  }
+
+  const acts = document.createElement('div');
+  acts.className = 'acts';
+  if (r.reserve_url){
+    const a = document.createElement('a');
+    a.className = 'btn'; a.href = r.reserve_url; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = '예약 페이지 열기'; acts.appendChild(a);
+  }
+  if (r.tel){
+    const a = document.createElement('a');
+    a.className = 'btn' + (r.reserve_url ? ' ghost' : '');
+    a.href = 'tel:' + r.tel.replace(/[^0-9+]/g, '');
+    a.textContent = '전화 ' + r.tel; acts.appendChild(a);
+  }
+  if (acts.children.length) el.appendChild(acts);
+
+  const d = document.createElement('details');
+  d.className = 'detail';
+  const sm = document.createElement('summary'); sm.textContent = '자세히';
+  d.appendChild(sm);
+  const dl = document.createElement('dl');
+  dl.className = 'dl';
+  const put = (k, v) => { if (!v) return;
+    const dt = document.createElement('dt'); dt.textContent = k;
+    const dd = document.createElement('dd'); dd.textContent = v;
+    dl.append(dt, dd); };
+  put('주소', r.addr);
+  put('운영기관', r.org);
+  if (r.tel_label && r.tel_label !== r.tel) put('연락처 안내', r.tel_label);
+  if (r.sigungu_guessed) put('자치구', r.sigungu + ' (좌표로 추정)');
+  put('휴관일', r.closed_day);
+  put('신청방법', r.apply);
+  put('면적', r.area ? r.area + '㎡' : null);
+  put('요금 원문', r.fee_raw && r.fee_raw !== '무료' ? r.fee_raw : null);
+  put('정보 기준일', r.checked);
+  put('출처', r.source);
+  d.appendChild(dl);
+
+  if (r.fee_kind === '실비' && r.fee_min){
+    const std = r.fee_std_hours || 1;
+    const c = document.createElement('div');
+    c.className = 'calc';
+    const lab1 = document.createElement('span'); lab1.textContent = '이용 시간';
+    const inp = document.createElement('input');
+    inp.type = 'number'; inp.min = '1'; inp.max = '12'; inp.value = '2';
+    inp.setAttribute('aria-label', '이용 시간');
+    const lab2 = document.createElement('span'); lab2.textContent = '시간이면';
+    const out = document.createElement('span'); out.className = 'out';
+    const note = document.createElement('span');
+    note.className = 'note'; note.textContent = '기준 ' + std + '시간 ' + won(r.fee_min) + '원';
+    c.append(lab1, inp, lab2, out, note);
+    const calc = () => {
+      const h = Math.max(1, Number(inp.value) || 1);
+      const over = Math.max(0, h - std);
+      const unit = r.fee_over_unit || 1;
+      const extra = r.fee_over ? Math.ceil(over / unit) * r.fee_over : 0;
+      out.textContent = won(r.fee_min + extra) + '원' + (over && !r.fee_over ? ' (초과요금 별도)' : '');
+    };
+    inp.addEventListener('input', calc); calc();
+    d.appendChild(c);
+  }
+  el.appendChild(d);
+  return el;
+}
+
+function render(){
+  const rows = DATA.filter(match).sort((a, b) => {
+    const ka = sortKey(a), kb = sortKey(b);
+    for (let i = 0; i < ka.length; i++) if (ka[i] !== kb[i]) return ka[i] < kb[i] ? -1 : 1;
+    return 0;
+  });
+  const list = document.getElementById('list');
+  const nOpen = rows.filter(isOpen).length;
+  const cnt = document.getElementById('count');
+  cnt.textContent = '';
+  const b = document.createElement('b'); b.textContent = rows.length + '곳';
+  cnt.appendChild(b);
+  if (nOpen) cnt.append(' · 그중 ' + nOpen + '곳은 지금 신청을 받고 있습니다');
+
+  list.textContent = '';
+  if (!rows.length){
+    const e = document.createElement('div');
+    e.className = 'empty';
+    const t = document.createElement('b'); t.textContent = '조건에 맞는 곳이 없습니다';
+    e.append(t, '인원을 줄이거나 동네를 넓혀 보세요.');
+    list.appendChild(e);
+    return;
+  }
+  const frag = document.createDocumentFragment();
+  rows.slice(0, 200).forEach(r => frag.appendChild(card(r)));
+  list.appendChild(frag);
+  if (rows.length > 200){
+    const m = document.createElement('p');
+    m.className = 'count';
+    m.textContent = '아래 ' + (rows.length - 200) + '곳은 조건을 더 좁히면 보입니다.';
+    list.appendChild(m);
+  }
+}
+
+document.getElementById('gu').addEventListener('change', e => { state.gu = e.target.value; render(); });
+document.getElementById('ppl').addEventListener('input', e => { state.ppl = Number(e.target.value) || null; render(); });
+document.getElementById('onlyfree').addEventListener('change', e => { state.free = e.target.checked; render(); });
+document.getElementById('onlyopen').addEventListener('change', e => { state.open = e.target.checked; render(); });
+document.getElementById('cats').addEventListener('click', e => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  Array.from(e.currentTarget.children).forEach(c => c.setAttribute('aria-pressed', String(c === b)));
+  state.cat = b.dataset.cat; render();
+});
+
+fetch('data/seoul_spaces.json').then(r => r.json()).then(rows => {
+  DATA = rows;
+  const gus = Array.from(new Set(rows.map(r => r.sigungu).filter(Boolean)))
+    .sort((a, b) => a.localeCompare(b, 'ko'));
+  const sel = document.getElementById('gu');
+  for (const g of gus){
+    const o = document.createElement('option');
+    o.value = g; o.textContent = g; sel.appendChild(o);
+  }
+  render();
+}).catch(err => {
+  document.getElementById('list').innerHTML = '';
+  const e = document.createElement('div');
+  e.className = 'empty';
+  const t = document.createElement('b'); t.textContent = '데이터를 불러오지 못했습니다';
+  e.append(t, String(err));
+  document.getElementById('list').appendChild(e);
+});
+</script>
+</body>
+</html>
