@@ -1,0 +1,85 @@
+name: 데이터 수집
+
+# 서울 공공서비스예약은 매일 1회 갱신된다. 그 뒤에 도는 것이 안전하므로
+# 한국시간 새벽 5시(UTC 20:00 전날)에 돈다.
+on:
+  schedule:
+    - cron: '0 20 * * *'
+  workflow_dispatch:
+    inputs:
+      min_ratio:
+        description: '안전장치 비율 (기존 대비 이만큼 밑으로 줄면 중단). 의도한 축소면 낮춰서 실행'
+        required: false
+        default: '0.7'
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 서울 공공서비스예약 수집
+        env:
+          SEOUL_KEY: ${{ secrets.SEOUL_KEY }}
+        run: |
+          if [ -z "$SEOUL_KEY" ]; then
+            echo "::error::SEOUL_KEY 시크릿이 없습니다. Settings → Secrets and variables → Actions 에서 등록하세요."
+            exit 1
+          fi
+          python3 tools/collect_seoul.py
+
+      - name: 전국 표준데이터 수집
+        env:
+          DATA_KEY: ${{ secrets.DATA_KEY }}
+        run: |
+          if [ -z "$DATA_KEY" ]; then
+            echo "::error::DATA_KEY 시크릿이 없습니다. Settings → Secrets and variables → Actions 에서 등록하세요."
+            exit 1
+          fi
+          python3 tools/collect_standard.py
+
+      - name: 데이터셋 구축
+        env:
+          MIN_RATIO: ${{ github.event.inputs.min_ratio || '0.7' }}
+        run: python3 tools/build_dataset.py
+
+      - name: 변경분 커밋
+        run: |
+          # git diff 는 추적되지 않는 새 파일을 놓치므로 status 로 본다
+          if [ -z "$(git status --porcelain -- site/data)" ]; then
+            echo "변경 없음 — 커밋 건너뜀"
+            exit 0
+          fi
+          TOTAL=$(python3 -c "import json;print(json.load(open('site/data/meta.json'))['total'])")
+          OPEN=$(python3 -c "import json;print(json.load(open('site/data/meta.json'))['tier_b'])")
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data
+          git commit -m "🔄 데이터 갱신 — ${TOTAL}곳 (예약 연결 ${OPEN}곳)"
+          git push
+
+      - name: 요약
+        if: always()
+        run: |
+          if [ -f site/data/meta.json ]; then
+            python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          m = json.load(open('site/data/meta.json'))
+          print(f"## 수집 결과\n")
+          print(f"- 갱신 시각 **{m['updated']}** (KST)")
+          print(f"- 전체 **{m['total']}곳** · 무료 {m['free']}곳")
+          print(f"- 예약 링크가 붙는 곳 **{m['tier_b']}곳**")
+          PY
+          fi

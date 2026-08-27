@@ -7,7 +7,7 @@
 
 체육시설 포함 방침(2026.8.27 결정)에 따라 실내·체육을 모두 담고 category 로 구분한다.
 """
-import json, math, re, sys, collections
+import datetime, json, math, os, re, sys, collections
 sys.path.insert(0, __file__.rsplit('/', 1)[0])
 from fees import classify
 from common import ROOT, OUT, save
@@ -200,6 +200,23 @@ def merge(cs, bs, radius_m=120):
             merged.append(b)
     return merged, len(used)
 
+def guard(rows, min_ratio=0.7):
+    """API가 일시적으로 반쪽만 응답할 때 기존 데이터를 덮어쓰지 않도록 막는다."""
+    prev_path = ROOT / 'site' / 'data' / 'seoul_spaces.json'
+    if not prev_path.exists():
+        return
+    try:
+        prev = len(json.loads(prev_path.read_text(encoding='utf-8')))
+    except Exception:
+        return
+    if prev and len(rows) < prev * min_ratio:
+        raise SystemExit(
+            f"중단: 이번 수집 {len(rows)}건이 기존 {prev}건의 {min_ratio:.0%}에 못 미칩니다.\n"
+            f"  API 장애일 수 있습니다. 기존 데이터를 유지하고 종료합니다.\n"
+            f"  의도한 축소라면 MIN_RATIO 환경변수를 낮춰 다시 실행하세요.")
+    print(f"  안전장치 통과 ({prev} → {len(rows)}건)")
+
+
 def main():
     std = json.load(open(OUT / 'standard_all.json', encoding='utf-8'))
     seoul = json.load(open(OUT / 'seoul_raw.json', encoding='utf-8'))
@@ -233,6 +250,8 @@ def main():
 
     for i, r in enumerate(rows):
         r['id'] = f"s{i+1:04d}"
+
+    guard(rows, float(os.environ.get('MIN_RATIO', '0.7')))
     print(f"\n  층: {dict(collections.Counter(r['tier'] for r in rows))}")
     print(f"  요금: {dict(collections.Counter(r['fee_kind'] for r in rows))}")
     print(f"  종류: {dict(collections.Counter(r['category'] for r in rows))}")
@@ -243,6 +262,22 @@ def main():
     print(f"  수용인원 있는 건 {len(cap)}/{len(rows)}")
     print(f"  예약 링크 있는 건 {sum(1 for r in rows if r['reserve_url'])}")
     save(rows, 'seoul_spaces.json')
+
+    kst = datetime.timezone(datetime.timedelta(hours=9))
+    meta = {
+        'updated': datetime.datetime.now(kst).strftime('%Y-%m-%d %H:%M'),
+        'total': len(rows),
+        'tier_b': sum(1 for r in rows if r['tier'] == 'B'),
+        'free': sum(1 for r in rows if r['fee_kind'] == '무료'),
+        'region': '서울',
+    }
+    save(meta, 'meta.json')
+    # 사이트가 읽는 위치로 복사한다
+    site = ROOT / 'site' / 'data'
+    if site.is_dir():
+        for n in ('seoul_spaces.json', 'meta.json'):
+            (site / n).write_text((OUT / n).read_text(encoding='utf-8'), encoding='utf-8')
+        print(f"  site/data 갱신")
 
 if __name__ == '__main__':
     main()

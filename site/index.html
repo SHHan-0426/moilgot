@@ -154,6 +154,7 @@ footer .wrap{padding:18px 16px 34px; display:flex; flex-direction:column; gap:5p
 </main>
 
 <footer><div class="wrap">
+  <span id="updated"></span>
   <span>출처 · 전국공공시설개방정보표준데이터(분기 갱신) + 서울시 공공서비스예약(매일 갱신)</span>
   <span>⚪ 표시는 그날 비었는지 알 수 없는 곳입니다. 전화로 확인하세요.</span>
 </div></footer>
@@ -321,6 +322,11 @@ document.getElementById('cats').addEventListener('click', e => {
   Array.from(e.currentTarget.children).forEach(c => c.setAttribute('aria-pressed', String(c === b)));
   state.cat = b.dataset.cat; render();
 });
+
+fetch('data/meta.json').then(r => r.ok ? r.json() : null).then(m => {
+  if (m && m.updated) document.getElementById('updated').textContent =
+    '최종 갱신 ' + m.updated + ' · ' + m.total + '곳';
+}).catch(() => {});
 
 fetch('data/seoul_spaces.json').then(r => r.json()).then(rows => {
   DATA = rows;
