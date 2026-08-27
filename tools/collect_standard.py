@@ -1,6 +1,8 @@
 """전국공공시설개방정보표준데이터 수집 → 수도권 필터 → 무료/실비 집계.
 
-  DATA_KEY='<일반 인증키 Decoding>' python3 tools/collect_standard.py
+  DATA_KEY='<일반 인증키>' python3 tools/collect_standard.py
+
+Encoding / Decoding 어느 쪽을 넣어도 된다. 스크립트가 두 형태를 다 시도해 되는 쪽을 쓴다.
 
 엔드포인트(공공데이터포털 상세페이지에서 확인):
   https://api.data.go.kr/openapi/tn_pubr_public_pblfclt_opn_info_api
@@ -14,11 +16,42 @@ URL = "https://api.data.go.kr/openapi/tn_pubr_public_pblfclt_opn_info_api"
 CAPITAL = ("서울", "경기", "인천")
 PER = 1000
 
+# 인증키를 Encoding/Decoding 중 어느 쪽으로 받았든 그냥 되게 한다.
+# 포털 화면이 '일반 인증키' 하나만 보여주는 경우도 있어 형태를 따지지 않는다.
+_MODE = {"v": None}   # None=미정, "quote"=원본키(인코딩 필요), "raw"=이미 인코딩된 키
+
+def _url(key, page, rows, mode):
+    rest = f"pageNo={page}&numOfRows={rows}&type=json"
+    sk = urllib.parse.quote(key, safe="") if mode == "quote" else key
+    return f"{URL}?serviceKey={sk}&{rest}"
+
+def _looks_auth_error(d):
+    s = str(d)
+    return any(w in s for w in (
+        "SERVICE_KEY_IS_NOT_REGISTERED", "인증키", "SERVICE ERROR",
+        "APPLICATION_ERROR", "UNREGISTERED", "LIMITED_NUMBER"))
+
 def call(key, page, rows=PER):
-    q = urllib.parse.urlencode({
-        "serviceKey": key, "pageNo": page, "numOfRows": rows, "type": "json"
-    })
-    return get_json(f"{URL}?{q}")
+    modes = [_MODE["v"]] if _MODE["v"] else ["quote", "raw"]
+    last = None
+    for m in modes:
+        try:
+            d = get_json(_url(key, page, rows, m))
+        except Exception as e:
+            last = e
+            continue
+        if _looks_auth_error(d) and _MODE["v"] is None:
+            last = RuntimeError(str(d)[:200])
+            continue
+        if _MODE["v"] is None:
+            _MODE["v"] = m
+            print(f"  인증키 형태: {'원본(Decoding)' if m == 'quote' else '인코딩됨(Encoding)'} 로 인식")
+        return d
+    raise SystemExit(
+        "인증키가 거부됐습니다. 두 형태 모두 시도했습니다.\n"
+        "  · 활용신청이 '승인' 상태인지 확인하세요 (자동승인이지만 반영에 몇 분 걸릴 수 있습니다)\n"
+        "  · 키 앞뒤 공백이나 줄바꿈이 섞이지 않았는지 확인하세요\n"
+        f"  · 마지막 응답: {last}")
 
 def unwrap(d):
     """응답 껍데기가 버전마다 조금씩 달라 방어적으로 벗긴다."""
@@ -52,7 +85,7 @@ def main():
         raise SystemExit(__doc__)
     total, first = unwrap(call(key, 1))
     if not total:
-        raise SystemExit("총건수 0 — 인증키(Decoding 값)와 활용신청 승인 여부를 확인하세요.")
+        raise SystemExit("총건수 0 — 활용신청 승인 여부를 확인하세요.")
     print(f"  전국 총 {total:,}건 수집 시작")
     rows = list(first)
     page = 2
