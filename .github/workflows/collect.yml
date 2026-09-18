@@ -30,6 +30,16 @@ jobs:
         with:
           python-version: '3.12'
 
+      # data.go.kr 은 해외 서버(Actions)에서 가끔 응답이 없다.
+      # 직전 표준데이터를 캐시에 보관해 두었다가, 그날 접속이 안 되면 그걸로 계속 간다.
+      # (data/out 은 .gitignore 라 저장소에는 남지 않는다)
+      - name: 직전 표준데이터 복원
+        uses: actions/cache@v4
+        with:
+          path: data/out/standard_all.json
+          key: standard-${{ github.run_id }}
+          restore-keys: standard-
+
       - name: 서울 공공서비스예약 수집
         env:
           SEOUL_KEY: ${{ secrets.SEOUL_KEY }}

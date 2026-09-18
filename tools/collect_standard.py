@@ -9,7 +9,7 @@ Encoding / Decoding 어느 쪽을 넣어도 된다. 스크립트가 두 형태�
   개발단계·운영단계 모두 자동승인 / 개발계정 트래픽 10,000 / numOfRows 최대 1000
 지역 필터 파라미터가 없어 전량을 받아 주소로 거른다.
 """
-import collections, os, urllib.parse
+import collections, os, pathlib, sys, time, urllib.parse
 from common import get_json, save
 
 URL = "https://api.data.go.kr/openapi/tn_pubr_public_pblfclt_opn_info_api"
@@ -31,22 +31,46 @@ def _looks_auth_error(d):
         "SERVICE_KEY_IS_NOT_REGISTERED", "인증키", "SERVICE ERROR",
         "APPLICATION_ERROR", "UNREGISTERED", "LIMITED_NUMBER"))
 
+class NetworkDown(Exception):
+    """data.go.kr 에 닿지 못함 (시간 초과·연결 거부). 인증키 문제와 구분한다."""
+
+# data.go.kr 은 GitHub Actions(해외 IP)에서 가끔 응답을 주지 않는다.
+# 한두 번 끊겼다고 수집 전체를 멈추지 않도록 간격을 두고 다시 시도한다.
+RETRIES = 4
+WAIT = (5, 15, 30)
+
+def _is_network(e):
+    s = f"{type(e).__name__} {e}"
+    return any(w in s for w in ("timed out", "timeout", "Timeout", "URLError",
+                                "Connection", "reset", "refused", "Temporary", "503", "502", "504"))
+
 def call(key, page, rows=PER):
     modes = [_MODE["v"]] if _MODE["v"] else ["quote", "raw"]
-    last = None
-    for m in modes:
-        try:
-            d = get_json(_url(key, page, rows, m))
-        except Exception as e:
-            last = e
-            continue
-        if _looks_auth_error(d) and _MODE["v"] is None:
-            last = RuntimeError(str(d)[:200])
-            continue
-        if _MODE["v"] is None:
-            _MODE["v"] = m
-            print(f"  인증키 형태: {'원본(Decoding)' if m == 'quote' else '인코딩됨(Encoding)'} 로 인식")
-        return d
+    last, net_only = None, True
+    for attempt in range(RETRIES):
+        for m in modes:
+            try:
+                d = get_json(_url(key, page, rows, m), timeout=60)
+            except Exception as e:
+                last = e
+                if not _is_network(e):
+                    net_only = False
+                continue
+            if _looks_auth_error(d) and _MODE["v"] is None:
+                last, net_only = RuntimeError(str(d)[:200]), False
+                continue
+            if _MODE["v"] is None:
+                _MODE["v"] = m
+                print(f"  인증키 형태: {'원본(Decoding)' if m == 'quote' else '인코딩됨(Encoding)'} 로 인식")
+            return d
+        if not net_only:
+            break                      # 키 문제는 기다려도 안 낫는다
+        if attempt < RETRIES - 1:
+            w = WAIT[min(attempt, len(WAIT) - 1)]
+            print(f"  data.go.kr 응답 없음 — {w}초 뒤 다시 시도 ({attempt + 1}/{RETRIES - 1})")
+            time.sleep(w)
+    if net_only:
+        raise NetworkDown(f"data.go.kr 에 {RETRIES}번 시도했지만 닿지 못했습니다: {last}")
     raise SystemExit(
         "인증키가 거부됐습니다. 두 형태 모두 시도했습니다.\n"
         "  · 활용신청이 '승인' 상태인지 확인하세요 (자동승인이지만 반영에 몇 분 걸릴 수 있습니다)\n"
@@ -121,5 +145,18 @@ def main():
           "시군구": dict(sigungu), "게이트": gate}, "standard_summary.json")
     save(target, "capital_free_cheap.json")
 
+PREV = pathlib.Path(__file__).resolve().parent.parent / "data" / "out" / "standard_all.json"
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except NetworkDown as e:
+        # 표준데이터는 시설 목록이라 하루 이틀 묵어도 문제없다.
+        # 직전 수집분(Actions 캐시에서 복원)이 있으면 그걸로 계속 가고, 서울 예약 데이터는 오늘 것으로 갱신된다.
+        print(f"\n  ⚠ {e}")
+        if PREV.exists():
+            print(f"  → 직전 표준데이터({PREV.stat().st_size // 1024}KB)로 계속합니다. 서울 예약 데이터는 오늘 것입니다.")
+            print("::warning::data.go.kr 접속 실패 — 전국 표준데이터는 직전 수집분을 썼습니다")
+            sys.exit(0)
+        print("  → 직전 표준데이터도 없어 중단합니다.")
+        sys.exit(1)
