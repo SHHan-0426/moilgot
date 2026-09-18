@@ -145,18 +145,27 @@ def main():
           "시군구": dict(sigungu), "게이트": gate}, "standard_summary.json")
     save(target, "capital_free_cheap.json")
 
-PREV = pathlib.Path(__file__).resolve().parent.parent / "data" / "out" / "standard_all.json"
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+PREV = ROOT / "data" / "out" / "standard_all.json"          # 직전 수집분 (Actions 캐시에서 복원)
+SEED = ROOT / "data" / "seed" / "standard_seoul.json.gz"    # 저장소에 넣어 둔 비상용 서울분
 
 if __name__ == "__main__":
     try:
         main()
     except NetworkDown as e:
-        # 표준데이터는 시설 목록이라 하루 이틀 묵어도 문제없다.
-        # 직전 수집분(Actions 캐시에서 복원)이 있으면 그걸로 계속 가고, 서울 예약 데이터는 오늘 것으로 갱신된다.
+        # 표준데이터는 시설 목록이라 며칠 묵어도 문제없다. 서울 예약 데이터는 오늘 것으로 갱신된다.
         print(f"\n  ⚠ {e}")
         if PREV.exists():
-            print(f"  → 직전 표준데이터({PREV.stat().st_size // 1024}KB)로 계속합니다. 서울 예약 데이터는 오늘 것입니다.")
+            print(f"  → 직전 수집분({PREV.stat().st_size // 1024}KB)으로 계속합니다.")
             print("::warning::data.go.kr 접속 실패 — 전국 표준데이터는 직전 수집분을 썼습니다")
             sys.exit(0)
-        print("  → 직전 표준데이터도 없어 중단합니다.")
+        if SEED.exists():
+            import gzip, json
+            rows = json.load(gzip.open(SEED, "rt", encoding="utf-8"))
+            PREV.parent.mkdir(parents=True, exist_ok=True)
+            PREV.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+            print(f"  → 직전 수집분이 없어 저장소 비상용 사본(서울 {len(rows):,}건)으로 계속합니다.")
+            print("::warning::data.go.kr 접속 실패 — 전국 표준데이터는 저장소 비상용 사본을 썼습니다")
+            sys.exit(0)
+        print("  → 직전 수집분도 비상용 사본도 없어 중단합니다.")
         sys.exit(1)
