@@ -14413,7 +14413,7 @@
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260927152414347387",
     "rcpt_end": "2026-10-29",
-    "variants": 2,
+    "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
     "id": "s0424"
@@ -14594,6 +14594,41 @@
     "id": "s0429"
   },
   {
+    "name": "서울청년센터 광진 촬영소(미디어스튜디오) 대관",
+    "place": "서울청년센터 광진",
+    "category": "실내",
+    "fclty_type": "청년공간",
+    "sigungu": "광진구",
+    "addr": null,
+    "lat": 37.55223,
+    "lng": 127.07654,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "10:00",
+    "close": "21:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": null,
+    "tel_label": null,
+    "homepage": null,
+    "org": "서울청년센터 광진",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260116092315075496",
+    "rcpt_end": "2026-12-31",
+    "variants": 2,
+    "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0430"
+  },
+  {
     "name": "서초구 내곡열린문화센터 4층 대강당",
     "place": "내곡동 주민센터",
     "category": "실내",
@@ -14626,7 +14661,7 @@
     "variants": 1,
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
-    "id": "s0430"
+    "id": "s0431"
   },
   {
     "name": "노원구 공릉1동 공릉행복문화창작소 두드림",
@@ -14661,7 +14696,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0431"
+    "id": "s0432"
   },
   {
     "name": "신길7동 마음서랍작은도서관 커뮤니티룸 대관",
@@ -14696,7 +14731,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0432"
+    "id": "s0433"
   },
   {
     "name": "2026 경의선숲길공원(연남동구간) 버스킹",
@@ -14731,7 +14766,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0433"
+    "id": "s0434"
   },
   {
     "name": "구로구 구로2동 주민센터 3층 프로그램실",
@@ -14766,7 +14801,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0434"
+    "id": "s0435"
   },
   {
     "name": "용산도시기억전시관 세미나실 대관",
@@ -14801,7 +14836,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0435"
+    "id": "s0436"
   },
   {
     "name": "반포 슬로프",
@@ -14836,7 +14871,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0436"
+    "id": "s0437"
   },
   {
     "name": "망원 슬로프",
@@ -14871,7 +14906,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0437"
+    "id": "s0438"
   },
   {
     "name": "양천공원 키지트 온라인 사전예약 (1006-1011)",
@@ -14900,44 +14935,9 @@
     "homepage": null,
     "org": "양천공원 통합놀이터 키지트",
     "tier": "B",
-    "status": "안내중",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260907163330058301",
     "rcpt_end": "2026-10-04",
-    "variants": 2,
-    "source": "서울 공공서비스예약",
-    "checked": null,
-    "id": "s0438"
-  },
-  {
-    "name": "서울청년센터 광진 촬영소(미디어스튜디오) 대관",
-    "place": "서울청년센터 광진",
-    "category": "실내",
-    "fclty_type": "청년공간",
-    "sigungu": "광진구",
-    "addr": null,
-    "lat": 37.55223,
-    "lng": 127.07654,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "10:00",
-    "close": "21:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": null,
-    "tel_label": null,
-    "homepage": null,
-    "org": "서울청년센터 광진",
-    "tier": "B",
-    "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260116092315075496",
-    "rcpt_end": "2026-12-31",
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
@@ -15259,41 +15259,6 @@
     "id": "s0448"
   },
   {
-    "name": "서초1동반딧불센터 커뮤니티공간",
-    "place": "서초1동 반딧불센터",
-    "category": "실내",
-    "fclty_type": "주민공유공간",
-    "sigungu": "서초구",
-    "addr": null,
-    "lat": 37.48489,
-    "lng": 127.02171,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "10:00",
-    "close": "18:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": "02-521-0364",
-    "tel_label": "02-521-0364",
-    "homepage": null,
-    "org": "서초1동 반딧불센터",
-    "tier": "B",
-    "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230809110456329348",
-    "rcpt_end": "2027-12-31",
-    "variants": 1,
-    "source": "서울 공공서비스예약",
-    "checked": null,
-    "id": "s0449"
-  },
-  {
     "name": "서울특별시 강북노동자복지관 생활체육실 대관",
     "place": "서울시 강북노동자복지관",
     "category": "실내",
@@ -15326,7 +15291,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0450"
+    "id": "s0449"
   },
   {
     "name": "방배4동반딧불센터 커뮤니티공간",
@@ -15361,7 +15326,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0451"
+    "id": "s0450"
   },
   {
     "name": "전원마을반딧불센터 커뮤니티공간",
@@ -15393,6 +15358,41 @@
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230809100529344808",
     "rcpt_end": "2027-12-30",
+    "variants": 1,
+    "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0451"
+  },
+  {
+    "name": "서초1동반딧불센터 커뮤니티공간",
+    "place": "서초1동 반딧불센터",
+    "category": "실내",
+    "fclty_type": "주민공유공간",
+    "sigungu": "서초구",
+    "addr": null,
+    "lat": 37.48489,
+    "lng": 127.02171,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "10:00",
+    "close": "18:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": "02-521-0364",
+    "tel_label": "02-521-0364",
+    "homepage": null,
+    "org": "서초1동 반딧불센터",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230809110456329348",
+    "rcpt_end": "2027-12-31",
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
@@ -15600,7 +15600,7 @@
     "homepage": null,
     "org": "중랑창업지원센터 내 회의실",
     "tier": "B",
-    "status": "접수중",
+    "status": "접수종료",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250723162210931748",
     "rcpt_end": "2026-09-30",
     "variants": 1,
@@ -15635,7 +15635,7 @@
     "homepage": null,
     "org": "서울특별시 어린이병원 임상교육훈련센터",
     "tier": "B",
-    "status": "접수중",
+    "status": "접수종료",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260814095103949677",
     "rcpt_end": "2026-09-29",
     "variants": 1,
@@ -16443,7 +16443,7 @@
     "homepage": null,
     "org": "노고산실뿌리복지센터",
     "tier": "B",
-    "status": "접수중",
+    "status": "예약마감",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251222175254894962",
     "rcpt_end": "2026-10-31",
     "variants": 2,
@@ -16513,7 +16513,7 @@
     "homepage": null,
     "org": "서울청년센터 중구",
     "tier": "B",
-    "status": "접수중",
+    "status": "접수종료",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260810121135812393",
     "rcpt_end": "2026-09-30",
     "variants": 1,
@@ -16592,41 +16592,6 @@
     "id": "s0486"
   },
   {
-    "name": "에코파크 족구장 1면",
-    "place": "에코파크",
-    "category": "체육",
-    "fclty_type": "족구장",
-    "sigungu": "강남구",
-    "addr": null,
-    "lat": 37.495187838167,
-    "lng": 127.08817787505,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "06:00",
-    "close": "22:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": "02-445-9705",
-    "tel_label": "02-445-9705",
-    "homepage": null,
-    "org": "에코파크",
-    "tier": "B",
-    "status": "안내중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220321143329949537",
-    "rcpt_end": "2026-12-31",
-    "variants": 2,
-    "source": "표준데이터 + 서울 공공서비스예약",
-    "checked": null,
-    "id": "s0487"
-  },
-  {
     "name": "2026년 풋살경기장(옥수역하부)-이촌한강공원",
     "place": "이촌한강공원>풋살경기장(옥수역하부)",
     "category": "체육",
@@ -16659,7 +16624,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0488"
+    "id": "s0487"
   },
   {
     "name": "계남근린공원 인조잔디 축구장(등록팀 추첨제)",
@@ -16694,7 +16659,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0489"
+    "id": "s0488"
   },
   {
     "name": "풋살경기장B(구일역하부)",
@@ -16729,7 +16694,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0490"
+    "id": "s0489"
   },
   {
     "name": "2026년 중랑물재생센터 족구장 B",
@@ -16764,7 +16729,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0491"
+    "id": "s0490"
   },
   {
     "name": "2026년 중랑물재생센터 테니스장 A",
@@ -16799,7 +16764,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0492"
+    "id": "s0491"
   },
   {
     "name": "2026년도 중랑물재생센터 배드민턴장 3번코트",
@@ -16834,7 +16799,7 @@
     "variants": 4,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0493"
+    "id": "s0492"
   },
   {
     "name": "2026년 중랑물재생센터 축구장 (추첨제)",
@@ -16869,7 +16834,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0494"
+    "id": "s0493"
   },
   {
     "name": "응봉산 인공암벽 등반시설",
@@ -16904,7 +16869,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0495"
+    "id": "s0494"
   },
   {
     "name": "동작구 노들나루공원 축구장",
@@ -16939,7 +16904,7 @@
     "variants": 2,
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
-    "id": "s0496"
+    "id": "s0495"
   },
   {
     "name": "탄천센터 테니스장 1면 조명쪽 (일원1,개포3동 주민 전용 시설)",
@@ -16974,7 +16939,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0497"
+    "id": "s0496"
   },
   {
     "name": "서남센터 축구장",
@@ -17008,6 +16973,41 @@
     "rcpt_end": "2026-12-30",
     "variants": 1,
     "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0497"
+  },
+  {
+    "name": "에코파크 족구장 1면",
+    "place": "에코파크",
+    "category": "체육",
+    "fclty_type": "족구장",
+    "sigungu": "강남구",
+    "addr": null,
+    "lat": 37.495187838167,
+    "lng": 127.08817787505,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "06:00",
+    "close": "22:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": "02-445-9705",
+    "tel_label": "02-445-9705",
+    "homepage": null,
+    "org": "에코파크",
+    "tier": "B",
+    "status": "안내중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220321143329949537",
+    "rcpt_end": "2026-12-31",
+    "variants": 2,
+    "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
     "id": "s0498"
   },
@@ -17248,7 +17248,7 @@
     "homepage": null,
     "org": "서울에너지공사 목동 테니스장 1면",
     "tier": "B",
-    "status": "안내중",
+    "status": "예약마감",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230428115408736358",
     "rcpt_end": "2026-10-11",
     "variants": 1,
@@ -17283,7 +17283,7 @@
     "homepage": null,
     "org": "서울에너지공사 목동 테니스장 2면",
     "tier": "B",
-    "status": "안내중",
+    "status": "예약마감",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230425174848455942",
     "rcpt_end": "2026-10-11",
     "variants": 1,
@@ -17292,7 +17292,7 @@
     "id": "s0506"
   },
   {
-    "name": "9월 오금공원 다목적경기장 정구장 예약(송파구민 우선 예약 서비스)",
+    "name": "10월 오금공원 다목적경기장 정구장 예약(송파구민 우선 예약 서비스)",
     "place": "오금공원",
     "category": "체육",
     "fclty_type": "다목적경기장",
@@ -17313,14 +17313,14 @@
     "closed_day": null,
     "facilities": null,
     "apply": "온라인 예약",
-    "tel": "02-2147-5133",
-    "tel_label": "02-2147-5133",
+    "tel": "02-2147-5132",
+    "tel_label": "02-2147-5132",
     "homepage": null,
     "org": "오금공원",
     "tier": "B",
     "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260706101601747080",
-    "rcpt_end": "2026-09-30",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260918134603075125",
+    "rcpt_end": "2026-10-31",
     "variants": 6,
     "source": "서울 공공서비스예약",
     "checked": null,
@@ -17388,7 +17388,7 @@
     "homepage": null,
     "org": "한국외대 인조잔디 구장",
     "tier": "B",
-    "status": "접수중",
+    "status": "예약마감",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241022131131387828",
     "rcpt_end": "2026-09-30",
     "variants": 1,
