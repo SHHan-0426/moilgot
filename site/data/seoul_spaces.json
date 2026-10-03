@@ -15504,6 +15504,41 @@
     "id": "s0455"
   },
   {
+    "name": "[서울아트책보고 워크숍룸] 10월 공간 지원",
+    "place": "서울아트책보고",
+    "category": "실내",
+    "fclty_type": "강의실",
+    "sigungu": "구로구",
+    "addr": null,
+    "lat": 37.49826975985675,
+    "lng": 126.86727086827104,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "00:00",
+    "close": "00:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": "02-2066-4830",
+    "tel_label": "02-2066-4830",
+    "homepage": null,
+    "org": "서울아트책보고",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261003105757299142",
+    "rcpt_end": "2026-10-28",
+    "variants": 1,
+    "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0456"
+  },
+  {
     "name": "하반기 면목역 문화광장 사용 사전예약",
     "place": "면목역 광장",
     "category": "기타",
@@ -15536,7 +15571,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0456"
+    "id": "s0457"
   },
   {
     "name": "중랑구 중랑창업지원센터 회의실",
@@ -15571,7 +15606,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0457"
+    "id": "s0458"
   },
   {
     "name": "[마포구]마포여성동행센터 맘카페(공유주방) (마포구 여성 전용)",
@@ -15606,7 +15641,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0458"
+    "id": "s0459"
   },
   {
     "name": "서울특별시 어린이병원 임상교육훈련센터(2026년 10월~12월)",
@@ -15641,7 +15676,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0459"
+    "id": "s0460"
   },
   {
     "name": "마포종점 나들목 문화공간 무대",
@@ -15676,7 +15711,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0460"
+    "id": "s0461"
   },
   {
     "name": "이촌 슬로프",
@@ -15711,7 +15746,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0461"
+    "id": "s0462"
   },
   {
     "name": "강북문화정보도서관 상상공작소 작업실",
@@ -15746,7 +15781,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0462"
+    "id": "s0463"
   },
   {
     "name": "[마포구]부엉이근린공원 맘카페(공유주방) (마포구 여성 전용)",
@@ -15781,7 +15816,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0463"
+    "id": "s0464"
   },
   {
     "name": "[수시접수] 2026년 하반기 아뜨리애 갤러리 전시공간 대관",
@@ -15816,7 +15851,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0464"
+    "id": "s0465"
   },
   {
     "name": "2026년 하반기 회현지하도상가 내 공연공간 대관",
@@ -15852,7 +15887,7 @@
     "source": "서울 공공서비스예약",
     "checked": null,
     "sigungu_guessed": true,
-    "id": "s0465"
+    "id": "s0466"
   },
   {
     "name": "2026년 하반기 잠실지하광장 내 공연공간 대관",
@@ -15888,7 +15923,7 @@
     "source": "서울 공공서비스예약",
     "checked": null,
     "sigungu_guessed": true,
-    "id": "s0466"
+    "id": "s0467"
   },
   {
     "name": "구로 피크닉 가든",
@@ -15923,7 +15958,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0467"
+    "id": "s0468"
   },
   {
     "name": "[마포구]소금나루도서관 맘카페(공유주방) (마포구 여성 전용)",
@@ -15958,7 +15993,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0468"
+    "id": "s0469"
   },
   {
     "name": "[마포구]합정복지센터 맘카페(공유주방) (마포구 여성 전용)",
@@ -15993,7 +16028,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0469"
+    "id": "s0470"
   },
   {
     "name": "[마포구]성산1동 주민센터 맘카페(독서, 컴퓨터 공간) (마포구 여성 전용)",
@@ -16028,7 +16063,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0470"
+    "id": "s0471"
   },
   {
     "name": "[마포구]용강동복합청사 맘카페(공유주방) (마포구 여성 전용)",
@@ -16063,7 +16098,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0471"
+    "id": "s0472"
   },
   {
     "name": "[서울청년센터성북] 2층 회의실",
@@ -16098,7 +16133,7 @@
     "variants": 4,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0472"
+    "id": "s0473"
   },
   {
     "name": "[수시접수] 2026년 하반기 틈새미술관(을지3구역) 전시공간 대관",
@@ -16134,7 +16169,7 @@
     "source": "서울 공공서비스예약",
     "checked": null,
     "sigungu_guessed": true,
-    "id": "s0473"
+    "id": "s0474"
   },
   {
     "name": "[전태일기념관] 회의실",
@@ -16169,7 +16204,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0474"
+    "id": "s0475"
   },
   {
     "name": "[전태일기념관] 세미나실",
@@ -16204,7 +16239,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0475"
+    "id": "s0476"
   },
   {
     "name": "[전태일기념관] 교육실",
@@ -16239,7 +16274,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0476"
+    "id": "s0477"
   },
   {
     "name": "[마포구]신수어르신복지센터 맘카페(공유주방, 독서, 컴퓨터 공간) (마포구 여성 전용)",
@@ -16274,7 +16309,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0477"
+    "id": "s0478"
   },
   {
     "name": "[서울청년센터 성동] 공유공간 다목적실1",
@@ -16309,7 +16344,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0478"
+    "id": "s0479"
   },
   {
     "name": "[마포구]도화어르신복지센터 맘카페(공유주방, 독서, 컴퓨터 공간) (마포구 여성 전용)",
@@ -16344,7 +16379,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0479"
+    "id": "s0480"
   },
   {
     "name": "[마포구]마포나루 맘카페(공유주방, 독서, 컴퓨터 공간) (마포구 여성 전용)",
@@ -16379,7 +16414,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0480"
+    "id": "s0481"
   },
   {
     "name": "[수시대관 평일]모둠연습실1",
@@ -16414,7 +16449,7 @@
     "variants": 24,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0481"
+    "id": "s0482"
   },
   {
     "name": "[서울청년센터 중구] 회의실",
@@ -16449,7 +16484,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0482"
+    "id": "s0483"
   },
   {
     "name": "노원구 상계8동 청소년놀터(투플)",
@@ -16484,7 +16519,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0483"
+    "id": "s0484"
   },
   {
     "name": "다목적구장-2026년 응봉공원(대현산배수지)",
@@ -16519,7 +16554,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0484"
+    "id": "s0485"
   },
   {
     "name": "2026년 풋살경기장(옥수역하부)-이촌한강공원",
@@ -16554,7 +16589,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0485"
+    "id": "s0486"
   },
   {
     "name": "계남근린공원 인조잔디 축구장(등록팀 추첨제)",
@@ -16589,7 +16624,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0486"
+    "id": "s0487"
   },
   {
     "name": "풋살경기장B(구일역하부)",
@@ -16624,7 +16659,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0487"
+    "id": "s0488"
   },
   {
     "name": "2026년 중랑물재생센터 족구장 B",
@@ -16659,7 +16694,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0488"
+    "id": "s0489"
   },
   {
     "name": "2026년 중랑물재생센터 테니스장 A",
@@ -16694,7 +16729,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0489"
+    "id": "s0490"
   },
   {
     "name": "2026년도 중랑물재생센터 배드민턴장 3번코트",
@@ -16729,7 +16764,7 @@
     "variants": 4,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0490"
+    "id": "s0491"
   },
   {
     "name": "2026년 중랑물재생센터 축구장 (추첨제)",
@@ -16764,7 +16799,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0491"
+    "id": "s0492"
   },
   {
     "name": "응봉산 인공암벽 등반시설",
@@ -16799,7 +16834,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0492"
+    "id": "s0493"
   },
   {
     "name": "동작구 노들나루공원 축구장",
@@ -16834,7 +16869,7 @@
     "variants": 1,
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
-    "id": "s0493"
+    "id": "s0494"
   },
   {
     "name": "탄천센터 테니스장 1면 조명쪽 (일원1,개포3동 주민 전용 시설)",
@@ -16863,13 +16898,13 @@
     "homepage": null,
     "org": "서울물재생시설공단>탄천물재생센터",
     "tier": "B",
-    "status": "안내중",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220420104434156882",
     "rcpt_end": "2026-12-31",
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0494"
+    "id": "s0495"
   },
   {
     "name": "서남센터 축구장",
@@ -16904,7 +16939,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0495"
+    "id": "s0496"
   },
   {
     "name": "에코파크 족구장 1면",
@@ -16933,13 +16968,13 @@
     "homepage": null,
     "org": "에코파크",
     "tier": "B",
-    "status": "안내중",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220321143329949537",
     "rcpt_end": "2026-12-31",
     "variants": 2,
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
-    "id": "s0496"
+    "id": "s0497"
   },
   {
     "name": "마루공원 테니스장 1면",
@@ -16968,13 +17003,13 @@
     "homepage": null,
     "org": "마루공원",
     "tier": "B",
-    "status": "안내중",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S210216132409081901",
     "rcpt_end": "2026-12-31",
     "variants": 3,
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
-    "id": "s0497"
+    "id": "s0498"
   },
   {
     "name": "탄천센터 축구장",
@@ -17003,13 +17038,13 @@
     "homepage": null,
     "org": "탄천센터",
     "tier": "B",
-    "status": "안내중",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S210216141632920566",
     "rcpt_end": "2026-12-31",
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0498"
+    "id": "s0499"
   },
   {
     "name": "다목적구장-평일(서울숲, 이용기간 2026. 1. 1~12. 31)",
@@ -17044,7 +17079,7 @@
     "variants": 4,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0499"
+    "id": "s0500"
   },
   {
     "name": "서울숲 배드민턴장2(피클볼, 족구 등) - 시범운영",
@@ -17079,7 +17114,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0500"
+    "id": "s0501"
   },
   {
     "name": "2026년 풋살경기장(한남역 방향)-이촌한강공원",
@@ -17114,7 +17149,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0501"
+    "id": "s0502"
   },
   {
     "name": "2026년 풋살경기장-난지한강공원",
@@ -17149,7 +17184,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0502"
+    "id": "s0503"
   },
   {
     "name": "서울에너지공사 목동 테니스장 1면 (공휴일) 08:00~18:00",
@@ -17184,7 +17219,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0503"
+    "id": "s0504"
   },
   {
     "name": "서울에너지공사 목동 테니스장 2면 (공휴일) 08:00~18:00",
@@ -17219,7 +17254,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0504"
+    "id": "s0505"
   },
   {
     "name": "10월 오금공원 다목적경기장 정구장 예약(송파구민 우선 예약 서비스)",
@@ -17254,7 +17289,7 @@
     "variants": 3,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0505"
+    "id": "s0506"
   },
   {
     "name": "2026년 중랑물재생센터 풋살장(추첨제)",
@@ -17289,7 +17324,7 @@
     "variants": 1,
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
-    "id": "s0506"
+    "id": "s0507"
   },
   {
     "name": "한국외대 인조잔디 축구장",
@@ -17324,7 +17359,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0507"
+    "id": "s0508"
   },
   {
     "name": "금천 한내 파크골프장",
@@ -17359,7 +17394,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0508"
+    "id": "s0509"
   },
   {
     "name": "(구로구민 우선접수)구로스마트라운지 스크린파크골프체험",
@@ -17394,7 +17429,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0509"
+    "id": "s0510"
   },
   {
     "name": "2026 서울디지털동행플라자 은평센터 파크골프",
@@ -17429,7 +17464,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0510"
+    "id": "s0511"
   },
   {
     "name": "서울디지털동행플라자 도봉센터 스크린 파크골프",
@@ -17464,7 +17499,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0511"
+    "id": "s0512"
   },
   {
     "name": "서울디지털동행플라자 영등포센터 스크린 파크골프",
@@ -17499,7 +17534,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0512"
+    "id": "s0513"
   },
   {
     "name": "서울디지털동행플라자 동대문센터 스크린 파크골프",
@@ -17534,7 +17569,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0513"
+    "id": "s0514"
   },
   {
     "name": "서울디지털동행플라자 강동센터 스크린 파크골프",
@@ -17569,6 +17604,6 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0514"
+    "id": "s0515"
   }
 ]
