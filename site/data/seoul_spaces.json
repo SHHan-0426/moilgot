@@ -16103,7 +16103,7 @@
     "homepage": null,
     "org": "서울숲 생활문화센터",
     "tier": "B",
-    "status": "접수중",
+    "status": "접수종료",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260806135726859011",
     "rcpt_end": "2026-10-31",
     "variants": 24,
