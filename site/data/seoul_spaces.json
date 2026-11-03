@@ -6664,38 +6664,72 @@
     "id": "s0196"
   },
   {
-    "name": "월계3동주민센터 다목적실(3층)",
-    "place": "월계3동주민센터",
-    "category": "실내",
-    "fclty_type": "다목적실",
-    "sigungu": "노원구",
-    "addr": "서울특별시 노원구 마들로 57",
-    "lat": 37.62100498,
-    "lng": 127.0692318,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": null,
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": 40,
-    "area": "57",
-    "open": "09:00",
-    "close": "21:00",
-    "closed_day": "일",
-    "facilities": null,
-    "apply": "공공서비스예약시스템",
-    "tel": "02-2116-2463",
-    "tel_label": "02-2116-2463",
-    "homepage": "http://yeyak.seoul.go.kr/",
-    "org": "서울특별시 노원구청",
+    "name": "매봉산실내배드민턴장",
+    "place": "매봉산실내배드민턴장",
+    "category": "체육",
+    "fclty_type": "배드맨턴장",
+    "sigungu": "강남구",
+    "addr": "서울특별시 강남구 남부순환로 2711",
+    "lat": 37.486137,
+    "lng": 127.042414,
+    "fee_kind": "실비",
+    "fee_min": 2000,
+    "fee_raw": "2000원",
+    "fee_std_hours": 1,
+    "fee_over_unit": 1,
+    "fee_over": 2000,
+    "capacity": 16,
+    "area": "638.66",
+    "open": "06:00",
+    "close": "22:00",
+    "closed_day": "월요일+법정공휴일",
+    "facilities": "배드민턴 코트 4면+실외 농구장 1면",
+    "apply": "전화+방문",
+    "tel": "02-2176-0885",
+    "tel_label": "02-2176-0885",
+    "homepage": "http://life.gangnam.go.kr",
+    "org": "서울특별시 강남구 도시관리공단",
     "tier": "C",
     "status": null,
     "reserve_url": null,
     "rcpt_end": null,
     "source": "표준데이터",
-    "checked": "2026-04-10",
+    "checked": "2026-10-21",
     "id": "s0197"
+  },
+  {
+    "name": "포이테니스장",
+    "place": "포이테니스장",
+    "category": "체육",
+    "fclty_type": "테니스장",
+    "sigungu": "강남구",
+    "addr": "서울특별시 강남구 개포동 1274",
+    "lat": 37.47556427,
+    "lng": 127.0554971,
+    "fee_kind": "실비",
+    "fee_min": 6000,
+    "fee_raw": "6000원",
+    "fee_std_hours": 1,
+    "fee_over_unit": 1,
+    "fee_over": 6000,
+    "capacity": 8,
+    "area": "1308",
+    "open": "06:00",
+    "close": "22:00",
+    "closed_day": "법정 공휴일",
+    "facilities": "테니스 코트 2.5면",
+    "apply": "전화+방문+온라인(일부)",
+    "tel": "02-2176-0876",
+    "tel_label": "02-2176-0876",
+    "homepage": "http://life.gangnam.go.kr",
+    "org": "서울특별시 강남구 도시관리공단",
+    "tier": "C",
+    "status": null,
+    "reserve_url": null,
+    "rcpt_end": null,
+    "source": "표준데이터",
+    "checked": "2026-10-21",
+    "id": "s0198"
   },
   {
     "name": "일원스포츠문화센터",
@@ -6728,8 +6762,8 @@
     "reserve_url": null,
     "rcpt_end": null,
     "source": "표준데이터",
-    "checked": "2026-04-28",
-    "id": "s0198"
+    "checked": "2026-10-21",
+    "id": "s0199"
   },
   {
     "name": "강남세곡체육공원 체육시설",
@@ -6762,8 +6796,110 @@
     "reserve_url": null,
     "rcpt_end": null,
     "source": "표준데이터",
-    "checked": "2026-04-28",
-    "id": "s0199"
+    "checked": "2026-10-21",
+    "id": "s0200"
+  },
+  {
+    "name": "강남탄천파크골프장",
+    "place": "강남탄천파크골프장",
+    "category": "체육",
+    "fclty_type": "기타(파크골프장)",
+    "sigungu": "강남구",
+    "addr": "서울특별시 강남구 세곡동 13-2 일대",
+    "lat": 37.467037,
+    "lng": 127.122651,
+    "fee_kind": "실비",
+    "fee_min": 4000,
+    "fee_raw": "4000원",
+    "fee_std_hours": 2,
+    "fee_over_unit": 2,
+    "fee_over": 4000,
+    "capacity": 108,
+    "area": "24552",
+    "open": "09:00",
+    "close": "18:00",
+    "closed_day": "월요일+법정공휴일(기상상황에 따라 탄력운영)",
+    "facilities": "사무실+화장실",
+    "apply": "전화+방문+온라인",
+    "tel": "02-2176-0887",
+    "tel_label": "02-2176-0887",
+    "homepage": "http://life.gangnam.go.kr",
+    "org": "서울특별시 강남구 도시관리공단",
+    "tier": "C",
+    "status": null,
+    "reserve_url": null,
+    "rcpt_end": null,
+    "source": "표준데이터",
+    "checked": "2026-10-21",
+    "id": "s0201"
+  },
+  {
+    "name": "봉은테니스장",
+    "place": "봉은테니스장",
+    "category": "체육",
+    "fclty_type": "테니스장",
+    "sigungu": "강남구",
+    "addr": "서울특별시 강남구 봉은사로 513",
+    "lat": 37.51391154,
+    "lng": 127.055456,
+    "fee_kind": "실비",
+    "fee_min": 6000,
+    "fee_raw": "6000원",
+    "fee_std_hours": 1,
+    "fee_over_unit": 1,
+    "fee_over": 6000,
+    "capacity": 16,
+    "area": "2000",
+    "open": "06:00",
+    "close": "22:00",
+    "closed_day": "법정공휴일",
+    "facilities": "테니스 코트 4면",
+    "apply": "전화+방문+온라인(일부)",
+    "tel": "02-2176-0890",
+    "tel_label": "02-2176-0890",
+    "homepage": "http://life.gangnam.go.kr",
+    "org": "서울특별시 강남구 도시관리공단",
+    "tier": "C",
+    "status": null,
+    "reserve_url": null,
+    "rcpt_end": null,
+    "source": "표준데이터",
+    "checked": "2026-10-21",
+    "id": "s0202"
+  },
+  {
+    "name": "월계3동주민센터 다목적실(3층)",
+    "place": "월계3동주민센터",
+    "category": "실내",
+    "fclty_type": "다목적실",
+    "sigungu": "노원구",
+    "addr": "서울특별시 노원구 마들로 57",
+    "lat": 37.62100498,
+    "lng": 127.0692318,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": null,
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": 40,
+    "area": "57",
+    "open": "09:00",
+    "close": "21:00",
+    "closed_day": "일",
+    "facilities": null,
+    "apply": "공공서비스예약시스템",
+    "tel": "02-2116-2463",
+    "tel_label": "02-2116-2463",
+    "homepage": "http://yeyak.seoul.go.kr/",
+    "org": "서울특별시 노원구청",
+    "tier": "C",
+    "status": null,
+    "reserve_url": null,
+    "rcpt_end": null,
+    "source": "표준데이터",
+    "checked": "2026-04-10",
+    "id": "s0203"
   },
   {
     "name": "이태원2동 경리단길 공감",
@@ -6797,7 +6933,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-09-15",
-    "id": "s0200"
+    "id": "s0204"
   },
   {
     "name": "서빙고동주민센터 3층 빙고교실",
@@ -6831,7 +6967,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-09-15",
-    "id": "s0201"
+    "id": "s0205"
   },
   {
     "name": "마포구청 어울림마당(로비)",
@@ -6865,7 +7001,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-06-09",
-    "id": "s0202"
+    "id": "s0206"
   },
   {
     "name": "천호2동 주민센터 강의실2(3층)",
@@ -6899,7 +7035,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0203"
+    "id": "s0207"
   },
   {
     "name": "천호3동 자치회관 회의실(17층)",
@@ -6933,7 +7069,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0204"
+    "id": "s0208"
   },
   {
     "name": "성내1동 제1강의실(3층)",
@@ -6967,7 +7103,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0205"
+    "id": "s0209"
   },
   {
     "name": "성내1동 제2강의실(3층)",
@@ -7001,7 +7137,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0206"
+    "id": "s0210"
   },
   {
     "name": "성내2동 자치회관 다목적실(2층)",
@@ -7035,7 +7171,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0207"
+    "id": "s0211"
   },
   {
     "name": "성내2동 자치회관 강의실2(2층)",
@@ -7069,7 +7205,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0208"
+    "id": "s0212"
   },
   {
     "name": "길동 주민센터 회의실(3층)",
@@ -7103,7 +7239,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0209"
+    "id": "s0213"
   },
   {
     "name": "둔촌2동 주민센터 다목적실(2층)",
@@ -7137,7 +7273,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0210"
+    "id": "s0214"
   },
   {
     "name": "명일1동 자치회관 강의실(3층)",
@@ -7171,7 +7307,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0211"
+    "id": "s0215"
   },
   {
     "name": "명일1동 자치회관 다목적실(3층)",
@@ -7205,7 +7341,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0212"
+    "id": "s0216"
   },
   {
     "name": "고덕1동 자치회관 제1강의실(3층)",
@@ -7239,7 +7375,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0213"
+    "id": "s0217"
   },
   {
     "name": "고덕1동 자치회관 제2강의실(3층)",
@@ -7273,7 +7409,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0214"
+    "id": "s0218"
   },
   {
     "name": "고덕2동 자치회관 다목적실(2층)",
@@ -7307,7 +7443,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0215"
+    "id": "s0219"
   },
   {
     "name": "고덕2동 자치회관 소회의실(2층)",
@@ -7341,7 +7477,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0216"
+    "id": "s0220"
   },
   {
     "name": "암사1동 자치회관 제2강의실(2층)",
@@ -7375,7 +7511,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0217"
+    "id": "s0221"
   },
   {
     "name": "암사1동 자치회관 제1강의실(2층)",
@@ -7409,7 +7545,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0218"
+    "id": "s0222"
   },
   {
     "name": "암사1동 자치회관 다목적실(1층)",
@@ -7443,7 +7579,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0219"
+    "id": "s0223"
   },
   {
     "name": "암사2동 자치회관 다목적실(3층)",
@@ -7477,7 +7613,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0220"
+    "id": "s0224"
   },
   {
     "name": "암사2동 자치회관 강의실(3층)",
@@ -7511,7 +7647,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0221"
+    "id": "s0225"
   },
   {
     "name": "암사3동 자치회관 다목적실1(4층)",
@@ -7545,7 +7681,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0222"
+    "id": "s0226"
   },
   {
     "name": "암사3동 자치회관 회의실(3층)",
@@ -7579,7 +7715,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0223"
+    "id": "s0227"
   },
   {
     "name": "천호1동 자치회관 회의실(2층)",
@@ -7613,7 +7749,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0224"
+    "id": "s0228"
   },
   {
     "name": "천호1동 자치회관 다목적실(3층)",
@@ -7647,7 +7783,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0225"
+    "id": "s0229"
   },
   {
     "name": "천호2동 주민센터 강의실1(2층)",
@@ -7681,7 +7817,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0226"
+    "id": "s0230"
   },
   {
     "name": "반포3동주민센터 4층 문화교실 3",
@@ -7715,7 +7851,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-05-21",
-    "id": "s0227"
+    "id": "s0231"
   },
   {
     "name": "방배1동주민센터 2층 소회의실",
@@ -7749,7 +7885,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-05-21",
-    "id": "s0228"
+    "id": "s0232"
   },
   {
     "name": "양재2동주민센터 프로그램3실",
@@ -7783,7 +7919,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-05-21",
-    "id": "s0229"
+    "id": "s0233"
   },
   {
     "name": "양재2동주민센터 2층 상담실",
@@ -7817,7 +7953,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-05-21",
-    "id": "s0230"
+    "id": "s0234"
   },
   {
     "name": "강일동 자치회관 해오름(3층)",
@@ -7851,7 +7987,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0231"
+    "id": "s0235"
   },
   {
     "name": "강일동 자치회관 다온(3층)",
@@ -7885,7 +8021,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0232"
+    "id": "s0236"
   },
   {
     "name": "상일1동 주민센터 3층 다목적실(3층)",
@@ -7919,7 +8055,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0233"
+    "id": "s0237"
   },
   {
     "name": "상일1동 주민센터 3층 강의실(3층)",
@@ -7953,7 +8089,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-29",
-    "id": "s0234"
+    "id": "s0238"
   },
   {
     "name": "서초1동주민센터 4층 문화교실",
@@ -7987,75 +8123,7 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-05-21",
-    "id": "s0235"
-  },
-  {
-    "name": "매봉산실내배드민턴장",
-    "place": "매봉산실내배드민턴장",
-    "category": "체육",
-    "fclty_type": "배드맨턴장",
-    "sigungu": "강남구",
-    "addr": "서울특별시 강남구 남부순환로 2711",
-    "lat": 37.486137,
-    "lng": 127.042414,
-    "fee_kind": "실비",
-    "fee_min": 2000,
-    "fee_raw": "2000원",
-    "fee_std_hours": 1,
-    "fee_over_unit": 1,
-    "fee_over": 2000,
-    "capacity": 16,
-    "area": "638.66",
-    "open": "06:00",
-    "close": "22:00",
-    "closed_day": "월요일+법정공휴일",
-    "facilities": "배드민턴 코트 4면+실외 농구장 1면",
-    "apply": "전화+방문",
-    "tel": "02-2176-0885",
-    "tel_label": "02-2176-0885",
-    "homepage": "http://life.gangnam.go.kr",
-    "org": "서울특별시 강남구 도시관리공단",
-    "tier": "C",
-    "status": null,
-    "reserve_url": null,
-    "rcpt_end": null,
-    "source": "표준데이터",
-    "checked": "2026-04-28",
-    "id": "s0236"
-  },
-  {
-    "name": "포이테니스장",
-    "place": "포이테니스장",
-    "category": "체육",
-    "fclty_type": "테니스장",
-    "sigungu": "강남구",
-    "addr": "서울특별시 강남구 개포동 1274",
-    "lat": 37.47556427,
-    "lng": 127.0554971,
-    "fee_kind": "실비",
-    "fee_min": 6000,
-    "fee_raw": "6000원",
-    "fee_std_hours": 1,
-    "fee_over_unit": 1,
-    "fee_over": 6000,
-    "capacity": 8,
-    "area": "1308",
-    "open": "06:00",
-    "close": "22:00",
-    "closed_day": "법정 공휴일",
-    "facilities": "테니스 코트 2.5면",
-    "apply": "전화+방문+온라인(일부)",
-    "tel": "02-2176-0876",
-    "tel_label": "02-2176-0876",
-    "homepage": "http://life.gangnam.go.kr",
-    "org": "서울특별시 강남구 도시관리공단",
-    "tier": "C",
-    "status": null,
-    "reserve_url": null,
-    "rcpt_end": null,
-    "source": "표준데이터",
-    "checked": "2026-04-28",
-    "id": "s0237"
+    "id": "s0239"
   },
   {
     "name": "월계3동주민센터 다용도방(2층)",
@@ -8089,74 +8157,6 @@
     "rcpt_end": null,
     "source": "표준데이터",
     "checked": "2026-04-10",
-    "id": "s0238"
-  },
-  {
-    "name": "강남탄천파크골프장",
-    "place": "강남탄천파크골프장",
-    "category": "체육",
-    "fclty_type": "기타(파크골프장)",
-    "sigungu": "강남구",
-    "addr": "서울특별시 강남구 세곡동 13-2 일대",
-    "lat": 37.467037,
-    "lng": 127.122651,
-    "fee_kind": "실비",
-    "fee_min": 4000,
-    "fee_raw": "4000원",
-    "fee_std_hours": 2,
-    "fee_over_unit": 2,
-    "fee_over": 4000,
-    "capacity": 108,
-    "area": "24552",
-    "open": "09:00",
-    "close": "18:00",
-    "closed_day": "월요일+법정공휴일(기상상황에 따라 탄력운영)",
-    "facilities": "사무실+화장실",
-    "apply": "전화+방문+온라인",
-    "tel": "02-2176-0887",
-    "tel_label": "02-2176-0887",
-    "homepage": "http://life.gangnam.go.kr",
-    "org": "서울특별시 강남구 도시관리공단",
-    "tier": "C",
-    "status": null,
-    "reserve_url": null,
-    "rcpt_end": null,
-    "source": "표준데이터",
-    "checked": "2026-04-28",
-    "id": "s0239"
-  },
-  {
-    "name": "봉은테니스장",
-    "place": "봉은테니스장",
-    "category": "체육",
-    "fclty_type": "테니스장",
-    "sigungu": "강남구",
-    "addr": "서울특별시 강남구 봉은사로 513",
-    "lat": 37.51391154,
-    "lng": 127.055456,
-    "fee_kind": "실비",
-    "fee_min": 6000,
-    "fee_raw": "6000원",
-    "fee_std_hours": 1,
-    "fee_over_unit": 1,
-    "fee_over": 6000,
-    "capacity": 16,
-    "area": "2000",
-    "open": "06:00",
-    "close": "22:00",
-    "closed_day": "법정공휴일",
-    "facilities": "테니스 코트 4면",
-    "apply": "전화+방문+온라인(일부)",
-    "tel": "02-2176-0890",
-    "tel_label": "02-2176-0890",
-    "homepage": "http://life.gangnam.go.kr",
-    "org": "서울특별시 강남구 도시관리공단",
-    "tier": "C",
-    "status": null,
-    "reserve_url": null,
-    "rcpt_end": null,
-    "source": "표준데이터",
-    "checked": "2026-04-28",
     "id": "s0240"
   },
   {
@@ -11827,7 +11827,7 @@
     "org": "서울특별시 구로구청",
     "tier": "B",
     "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260105110157825778",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260105105453512463",
     "rcpt_end": "2026-12-31",
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": "2025-12-24",
@@ -14464,6 +14464,41 @@
     "id": "s0425"
   },
   {
+    "name": "서울청년센터 광진 촬영소(미디어스튜디오) 대관",
+    "place": "서울청년센터 광진",
+    "category": "실내",
+    "fclty_type": "청년공간",
+    "sigungu": "광진구",
+    "addr": null,
+    "lat": 37.55223,
+    "lng": 127.07654,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "10:00",
+    "close": "21:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": null,
+    "tel_label": null,
+    "homepage": null,
+    "org": "서울청년센터 광진",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260116092315075496",
+    "rcpt_end": "2026-12-31",
+    "variants": 2,
+    "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0426"
+  },
+  {
     "name": "반포 슬로프",
     "place": "반포 슬로프",
     "category": "기타",
@@ -14496,7 +14531,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0426"
+    "id": "s0427"
   },
   {
     "name": "망원 슬로프",
@@ -14531,7 +14566,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0427"
+    "id": "s0428"
   },
   {
     "name": "양천공원 키지트 온라인 사전예약 (1110-1115)",
@@ -14563,10 +14598,10 @@
     "status": "안내중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261012101251376076",
     "rcpt_end": "2026-11-08",
-    "variants": 2,
+    "variants": 3,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0428"
+    "id": "s0429"
   },
   {
     "name": "서울청년센터 마포 미디어실(1~2인 사용가능 미디어룸)",
@@ -14601,7 +14636,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0429"
+    "id": "s0430"
   },
   {
     "name": "서울청년센터 금천 청춘삘딩[독산점 공유주방]",
@@ -14632,41 +14667,6 @@
     "tier": "B",
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260105110923188618",
-    "rcpt_end": "2026-12-31",
-    "variants": 2,
-    "source": "서울 공공서비스예약",
-    "checked": null,
-    "id": "s0430"
-  },
-  {
-    "name": "서울청년센터 광진 촬영소(미디어스튜디오) 대관",
-    "place": "서울청년센터 광진",
-    "category": "실내",
-    "fclty_type": "청년공간",
-    "sigungu": "광진구",
-    "addr": null,
-    "lat": 37.55223,
-    "lng": 127.07654,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "10:00",
-    "close": "21:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": null,
-    "tel_label": null,
-    "homepage": null,
-    "org": "서울청년센터 광진",
-    "tier": "B",
-    "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260116092315075496",
     "rcpt_end": "2026-12-31",
     "variants": 2,
     "source": "서울 공공서비스예약",
@@ -14919,41 +14919,6 @@
     "id": "s0438"
   },
   {
-    "name": "[서울청년센터 도봉] 프로그램실(1층)",
-    "place": "서울청년센터 도봉",
-    "category": "실내",
-    "fclty_type": "청년공간",
-    "sigungu": "도봉구",
-    "addr": null,
-    "lat": 37.65313238883252,
-    "lng": 127.04875385874352,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "10:00",
-    "close": "20:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": null,
-    "tel_label": null,
-    "homepage": null,
-    "org": "서울청년센터 도봉",
-    "tier": "B",
-    "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230616154734913273",
-    "rcpt_end": "2026-11-30",
-    "variants": 3,
-    "source": "서울 공공서비스예약",
-    "checked": null,
-    "id": "s0439"
-  },
-  {
     "name": "서울특별시 강북노동자복지관 생활체육실 대관",
     "place": "서울시 강북노동자복지관",
     "category": "실내",
@@ -14986,7 +14951,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0440"
+    "id": "s0439"
   },
   {
     "name": "방배4동반딧불센터 커뮤니티공간",
@@ -15021,7 +14986,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0441"
+    "id": "s0440"
   },
   {
     "name": "전원마을반딧불센터 커뮤니티공간",
@@ -15056,7 +15021,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0442"
+    "id": "s0441"
   },
   {
     "name": "서초1동반딧불센터 커뮤니티공간",
@@ -15091,7 +15056,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0443"
+    "id": "s0442"
   },
   {
     "name": "방배2동반딧불센터 커뮤니티공간",
@@ -15126,7 +15091,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0444"
+    "id": "s0443"
   },
   {
     "name": "서초3동반딧불센터 커뮤니티공간",
@@ -15159,6 +15124,41 @@
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230809105923901094",
     "rcpt_end": "2027-12-30",
     "variants": 1,
+    "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0444"
+  },
+  {
+    "name": "[서울청년센터 도봉] 회의실(1층)",
+    "place": "서울청년센터 도봉",
+    "category": "실내",
+    "fclty_type": "청년공간",
+    "sigungu": "도봉구",
+    "addr": null,
+    "lat": 37.65313238883252,
+    "lng": 127.04875385874352,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "10:00",
+    "close": "20:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": null,
+    "tel_label": null,
+    "homepage": null,
+    "org": "서울청년센터 도봉",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S230616151245305514",
+    "rcpt_end": "2026-11-30",
+    "variants": 3,
     "source": "서울 공공서비스예약",
     "checked": null,
     "id": "s0445"
@@ -15304,6 +15304,41 @@
     "id": "s0449"
   },
   {
+    "name": "강북문화정보도서관 상상공작소 작업실",
+    "place": "강북문화정보도서관",
+    "category": "실내",
+    "fclty_type": "주민공유공간",
+    "sigungu": "강북구",
+    "addr": null,
+    "lat": 37.62512,
+    "lng": 127.03609,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "09:00",
+    "close": "17:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": "02-944-3127",
+    "tel_label": "02-944-3127",
+    "homepage": null,
+    "org": "강북문화정보도서관",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250225141423643424",
+    "rcpt_end": "2026-12-31",
+    "variants": 1,
+    "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0450"
+  },
+  {
     "name": "[마포구]마포여성동행센터 맘카페(공유주방) (마포구 여성 전용)",
     "place": "마포여성동행센터",
     "category": "실내",
@@ -15336,7 +15371,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0450"
+    "id": "s0451"
   },
   {
     "name": "이촌 슬로프",
@@ -15368,41 +15403,6 @@
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S241214011731013728",
     "rcpt_end": "2035-12-31",
-    "variants": 1,
-    "source": "서울 공공서비스예약",
-    "checked": null,
-    "id": "s0451"
-  },
-  {
-    "name": "강북문화정보도서관 상상공작소 작업실",
-    "place": "강북문화정보도서관",
-    "category": "실내",
-    "fclty_type": "주민공유공간",
-    "sigungu": "강북구",
-    "addr": null,
-    "lat": 37.62512,
-    "lng": 127.03609,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "09:00",
-    "close": "17:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": "02-944-3127",
-    "tel_label": "02-944-3127",
-    "homepage": null,
-    "org": "강북문화정보도서관",
-    "tier": "B",
-    "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250225141423643424",
-    "rcpt_end": "2026-12-31",
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
@@ -15622,7 +15622,7 @@
   },
   {
     "name": "[마포구]합정복지센터 맘카페(공유주방) (마포구 여성 전용)",
-    "place": "합정실뿌리복지센터",
+    "place": "합정복지센터",
     "category": "실내",
     "fclty_type": "주민공유공간",
     "sigungu": "마포구",
@@ -15645,7 +15645,7 @@
     "tel": "02-701-0308",
     "tel_label": "02-701-0308",
     "homepage": null,
-    "org": "합정실뿌리복지센터",
+    "org": "합정복지센터",
     "tier": "B",
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250624090555504553",
@@ -15657,7 +15657,7 @@
   },
   {
     "name": "[마포구]성산1동 주민센터 맘카페(독서, 컴퓨터 공간) (마포구 여성 전용)",
-    "place": "성산1실뿌리복지센터",
+    "place": "성산1동 주민센터",
     "category": "실내",
     "fclty_type": "주민공유공간",
     "sigungu": "마포구",
@@ -15680,7 +15680,7 @@
     "tel": "02-701-0308",
     "tel_label": "02-701-0308",
     "homepage": null,
-    "org": "성산1실뿌리복지센터",
+    "org": "성산1동 주민센터",
     "tier": "B",
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250909103632515144",
@@ -15692,7 +15692,7 @@
   },
   {
     "name": "[마포구]용강동복합청사 맘카페(공유주방) (마포구 여성 전용)",
-    "place": "용강실뿌리복지센터",
+    "place": "용강동 복합청사",
     "category": "실내",
     "fclty_type": "주민공유공간",
     "sigungu": "마포구",
@@ -15715,7 +15715,7 @@
     "tel": "02-701-0308",
     "tel_label": "02-701-0308",
     "homepage": null,
-    "org": "용강실뿌리복지센터",
+    "org": "용강동 복합청사",
     "tier": "B",
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250729134445327533",
@@ -15903,7 +15903,7 @@
   },
   {
     "name": "[마포구]신수어르신복지센터 맘카페(공유주방, 독서, 컴퓨터 공간) (마포구 여성 전용)",
-    "place": "신수실뿌리복지센터",
+    "place": "신수어르신복지센터",
     "category": "실내",
     "fclty_type": "주민공유공간",
     "sigungu": "마포구",
@@ -15926,7 +15926,7 @@
     "tel": "02-701-0308",
     "tel_label": "02-701-0308",
     "homepage": null,
-    "org": "신수실뿌리복지센터",
+    "org": "신수어르신복지센터",
     "tier": "B",
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251020163028506070",
@@ -15973,7 +15973,7 @@
   },
   {
     "name": "[마포구]도화어르신복지센터 맘카페(공유주방, 독서, 컴퓨터 공간) (마포구 여성 전용)",
-    "place": "도화실뿌리복지센터",
+    "place": "도화어르신복지센터",
     "category": "실내",
     "fclty_type": "주민공유공간",
     "sigungu": "마포구",
@@ -15996,7 +15996,7 @@
     "tel": "02-701-0308",
     "tel_label": "02-701-0308",
     "homepage": null,
-    "org": "도화실뿌리복지센터",
+    "org": "도화어르신복지센터",
     "tier": "B",
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251202125432116013",
@@ -16068,9 +16068,9 @@
     "homepage": null,
     "org": "서울숲 생활문화센터",
     "tier": "B",
-    "status": "접수종료",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260508170539798720",
-    "rcpt_end": "2026-10-31",
+    "rcpt_end": "2026-11-28",
     "variants": 24,
     "source": "서울 공공서비스예약",
     "checked": null,
@@ -16419,10 +16419,10 @@
     "org": "중랑물재생센터>배드민턴장",
     "tier": "B",
     "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251125140753377942",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251125135636225142",
     "rcpt_end": "2026-12-31",
-    "variants": 3,
-    "source": "표준데이터 + 서울 공공서비스예약",
+    "variants": 4,
+    "source": "서울 공공서비스예약",
     "checked": null,
     "id": "s0481"
   },
@@ -16736,7 +16736,7 @@
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251203154953237206",
     "rcpt_end": "2026-12-30",
-    "variants": 3,
+    "variants": 4,
     "source": "서울 공공서비스예약",
     "checked": null,
     "id": "s0490"
