@@ -14455,7 +14455,7 @@
     "homepage": null,
     "org": "용산도시기억전시관",
     "tier": "B",
-    "status": "예약마감",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261013130947640977",
     "rcpt_end": "2026-11-27",
     "variants": 1,
@@ -14595,7 +14595,7 @@
     "homepage": null,
     "org": "양천공원 통합놀이터 키지트",
     "tier": "B",
-    "status": "안내중",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261012101251376076",
     "rcpt_end": "2026-11-08",
     "variants": 3,
@@ -16462,6 +16462,41 @@
     "id": "s0482"
   },
   {
+    "name": "마루공원 족구장 2면",
+    "place": "마루공원",
+    "category": "체육",
+    "fclty_type": "족구장",
+    "sigungu": "강남구",
+    "addr": null,
+    "lat": 37.49523951079615,
+    "lng": 127.08065924405156,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "06:00",
+    "close": "22:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": "02-445-9705",
+    "tel_label": "02-445-9705",
+    "homepage": null,
+    "org": "마루공원",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S210216131458353106",
+    "rcpt_end": "2026-12-31",
+    "variants": 3,
+    "source": "표준데이터 + 서울 공공서비스예약",
+    "checked": null,
+    "id": "s0483"
+  },
+  {
     "name": "응봉산 인공암벽 등반시설",
     "place": "응봉산 인공암벽 등반시설",
     "category": "기타",
@@ -16494,7 +16529,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0483"
+    "id": "s0484"
   },
   {
     "name": "동작구 노들나루공원 축구장",
@@ -16529,7 +16564,7 @@
     "variants": 1,
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
-    "id": "s0484"
+    "id": "s0485"
   },
   {
     "name": "탄천센터 테니스장 1면 조명쪽 (일원1,개포3동 주민 전용 시설)",
@@ -16564,7 +16599,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0485"
+    "id": "s0486"
   },
   {
     "name": "서남센터 축구장",
@@ -16599,7 +16634,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0486"
+    "id": "s0487"
   },
   {
     "name": "에코파크 족구장 1면",
@@ -16632,41 +16667,6 @@
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220321143329949537",
     "rcpt_end": "2026-12-31",
     "variants": 2,
-    "source": "표준데이터 + 서울 공공서비스예약",
-    "checked": null,
-    "id": "s0487"
-  },
-  {
-    "name": "마루공원 테니스장 1면",
-    "place": "마루공원",
-    "category": "체육",
-    "fclty_type": "테니스장",
-    "sigungu": "강남구",
-    "addr": null,
-    "lat": 37.49523951079615,
-    "lng": 127.08065924405156,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "06:00",
-    "close": "22:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": "02-445-9705",
-    "tel_label": "02-445-9705",
-    "homepage": null,
-    "org": "마루공원",
-    "tier": "B",
-    "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S210216132409081901",
-    "rcpt_end": "2026-12-31",
-    "variants": 3,
     "source": "표준데이터 + 서울 공공서비스예약",
     "checked": null,
     "id": "s0488"
