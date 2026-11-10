@@ -14700,7 +14700,7 @@
     "homepage": null,
     "org": "중랑생활문화센터>중랑생활문화센터(다목적연습실)",
     "tier": "B",
-    "status": "예약마감",
+    "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251216095253476502",
     "rcpt_end": "2026-12-31",
     "variants": 1,
@@ -14744,6 +14744,41 @@
     "id": "s0433"
   },
   {
+    "name": "[서울청년센터노원] 해보다(PC)",
+    "place": "서울청년센터 노원",
+    "category": "실내",
+    "fclty_type": "청년공간",
+    "sigungu": "노원구",
+    "addr": null,
+    "lat": 37.65381413048446,
+    "lng": 127.0603153174388,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "10:00",
+    "close": "21:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": "02-937-5550",
+    "tel_label": "02-937-5550",
+    "homepage": null,
+    "org": "서울청년센터 노원",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S221021151144642859",
+    "rcpt_end": "2026-11-30",
+    "variants": 3,
+    "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0434"
+  },
+  {
     "name": "[2026 서울청년센터 강북] 4F 회의실 (적정 인원 4~8인)",
     "place": "강북청년창업마루",
     "category": "실내",
@@ -14773,41 +14808,6 @@
     "status": "접수중",
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251208135549857689",
     "rcpt_end": "2026-12-31",
-    "variants": 3,
-    "source": "서울 공공서비스예약",
-    "checked": null,
-    "id": "s0434"
-  },
-  {
-    "name": "[서울청년센터노원] 배우다(최소 4인~최대 11인)",
-    "place": "서울청년센터 노원",
-    "category": "실내",
-    "fclty_type": "청년공간",
-    "sigungu": "노원구",
-    "addr": null,
-    "lat": 37.65381413048446,
-    "lng": 127.0603153174388,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "10:00",
-    "close": "21:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": "02-937-5550",
-    "tel_label": "02-937-5550",
-    "homepage": null,
-    "org": "서울청년센터 노원",
-    "tier": "B",
-    "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S220722144143250673",
-    "rcpt_end": "2026-11-30",
     "variants": 3,
     "source": "서울 공공서비스예약",
     "checked": null,
@@ -15304,6 +15304,41 @@
     "id": "s0449"
   },
   {
+    "name": "[수시대관 주말]모둠연습실2",
+    "place": "서울숲 생활문화센터",
+    "category": "실내",
+    "fclty_type": "다목적실",
+    "sigungu": "성동구",
+    "addr": null,
+    "lat": 37.54908,
+    "lng": 127.04153,
+    "fee_kind": "무료",
+    "fee_min": 0,
+    "fee_raw": "무료",
+    "fee_std_hours": null,
+    "fee_over_unit": null,
+    "fee_over": null,
+    "capacity": null,
+    "area": null,
+    "open": "10:00",
+    "close": "18:00",
+    "closed_day": null,
+    "facilities": null,
+    "apply": "온라인 예약",
+    "tel": "02-2204-7554",
+    "tel_label": "02-2204-7554",
+    "homepage": null,
+    "org": "서울숲 생활문화센터",
+    "tier": "B",
+    "status": "접수중",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260806101844420527",
+    "rcpt_end": "2026-11-28",
+    "variants": 24,
+    "source": "서울 공공서비스예약",
+    "checked": null,
+    "id": "s0450"
+  },
+  {
     "name": "[마포구]마포여성동행센터 맘카페(공유주방) (마포구 여성 전용)",
     "place": "마포여성동행센터",
     "category": "실내",
@@ -15336,7 +15371,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0450"
+    "id": "s0451"
   },
   {
     "name": "이촌 슬로프",
@@ -15371,7 +15406,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0451"
+    "id": "s0452"
   },
   {
     "name": "강북문화정보도서관 상상공작소 작업실",
@@ -15406,7 +15441,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0452"
+    "id": "s0453"
   },
   {
     "name": "[마포구]부엉이근린공원 맘카페(공유주방) (마포구 여성 전용)",
@@ -15441,7 +15476,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0453"
+    "id": "s0454"
   },
   {
     "name": "[수시접수] 2026년 하반기 아뜨리애 갤러리 전시공간 대관",
@@ -15476,7 +15511,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0454"
+    "id": "s0455"
   },
   {
     "name": "[수시접수] 2026년 하반기 회현지하도상가 내 공연공간 대관",
@@ -15512,7 +15547,7 @@
     "source": "서울 공공서비스예약",
     "checked": null,
     "sigungu_guessed": true,
-    "id": "s0455"
+    "id": "s0456"
   },
   {
     "name": "[수시접수] 2026년 하반기 잠실지하광장 내 공연공간 대관",
@@ -15548,7 +15583,7 @@
     "source": "서울 공공서비스예약",
     "checked": null,
     "sigungu_guessed": true,
-    "id": "s0456"
+    "id": "s0457"
   },
   {
     "name": "구로 피크닉 가든",
@@ -15583,7 +15618,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0457"
+    "id": "s0458"
   },
   {
     "name": "[마포구]소금나루도서관 맘카페(공유주방) (마포구 여성 전용)",
@@ -15618,7 +15653,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0458"
+    "id": "s0459"
   },
   {
     "name": "[마포구]합정복지센터 맘카페(공유주방) (마포구 여성 전용)",
@@ -15653,7 +15688,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0459"
+    "id": "s0460"
   },
   {
     "name": "[마포구]성산1동 주민센터 맘카페(독서, 컴퓨터 공간) (마포구 여성 전용)",
@@ -15688,7 +15723,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0460"
+    "id": "s0461"
   },
   {
     "name": "[마포구]용강동복합청사 맘카페(공유주방) (마포구 여성 전용)",
@@ -15723,7 +15758,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0461"
+    "id": "s0462"
   },
   {
     "name": "[서울청년센터성북] 2층 회의실",
@@ -15758,7 +15793,7 @@
     "variants": 4,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0462"
+    "id": "s0463"
   },
   {
     "name": "[수시접수] 2026년 하반기 틈새미술관(을지3구역) 전시공간 대관",
@@ -15794,7 +15829,7 @@
     "source": "서울 공공서비스예약",
     "checked": null,
     "sigungu_guessed": true,
-    "id": "s0463"
+    "id": "s0464"
   },
   {
     "name": "[전태일기념관] 회의실",
@@ -15829,7 +15864,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0464"
+    "id": "s0465"
   },
   {
     "name": "[마포구]신수어르신복지센터 맘카페(공유주방, 독서, 컴퓨터 공간) (마포구 여성 전용)",
@@ -15864,7 +15899,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0465"
+    "id": "s0466"
   },
   {
     "name": "[서울청년센터 성동] 공유공간 다목적실1",
@@ -15899,7 +15934,7 @@
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0466"
+    "id": "s0467"
   },
   {
     "name": "[마포구]도화어르신복지센터 맘카페(공유주방, 독서, 컴퓨터 공간) (마포구 여성 전용)",
@@ -15934,7 +15969,7 @@
     "variants": 1,
     "source": "서울 공공서비스예약",
     "checked": null,
-    "id": "s0467"
+    "id": "s0468"
   },
   {
     "name": "[마포구]마포나루 맘카페(공유주방, 독서, 컴퓨터 공간) (마포구 여성 전용)",
@@ -15967,41 +16002,6 @@
     "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S251212164023231115",
     "rcpt_end": "2026-11-30",
     "variants": 1,
-    "source": "서울 공공서비스예약",
-    "checked": null,
-    "id": "s0468"
-  },
-  {
-    "name": "[수시대관 평일]모둠연습실1",
-    "place": "서울숲 생활문화센터",
-    "category": "실내",
-    "fclty_type": "다목적실",
-    "sigungu": "성동구",
-    "addr": null,
-    "lat": 37.54908,
-    "lng": 127.04153,
-    "fee_kind": "무료",
-    "fee_min": 0,
-    "fee_raw": "무료",
-    "fee_std_hours": null,
-    "fee_over_unit": null,
-    "fee_over": null,
-    "capacity": null,
-    "area": null,
-    "open": "09:00",
-    "close": "21:00",
-    "closed_day": null,
-    "facilities": null,
-    "apply": "온라인 예약",
-    "tel": "02-2204-7554",
-    "tel_label": "02-2204-7554",
-    "homepage": null,
-    "org": "서울숲 생활문화센터",
-    "tier": "B",
-    "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260508170539798720",
-    "rcpt_end": "2026-11-28",
-    "variants": 24,
     "source": "서울 공공서비스예약",
     "checked": null,
     "id": "s0469"
@@ -16217,7 +16217,7 @@
     "id": "s0475"
   },
   {
-    "name": "풋살경기장B(구일역하부)",
+    "name": "풋살경기장A(구일역하부)",
     "place": "안양천 체육시설>풋살경기장(구일역 하부)",
     "category": "체육",
     "fclty_type": "풋살장",
@@ -16234,7 +16234,7 @@
     "capacity": null,
     "area": null,
     "open": "08:00",
-    "close": "24:00",
+    "close": "22:00",
     "closed_day": null,
     "facilities": null,
     "apply": "온라인 예약",
@@ -16244,8 +16244,8 @@
     "org": "안양천 체육시설>풋살경기장(구일역 하부)",
     "tier": "B",
     "status": "접수중",
-    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S250521110752802541",
-    "rcpt_end": "2026-12-15",
+    "reserve_url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S190522144836251426",
+    "rcpt_end": "2026-11-30",
     "variants": 2,
     "source": "서울 공공서비스예약",
     "checked": null,
